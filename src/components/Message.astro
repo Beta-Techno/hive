@@ -1,0 +1,144 @@
+---
+export interface Props {
+  author: string;
+  content: string;
+  timestamp: string;
+  avatar?: string;
+  isEdited?: boolean;
+  reactions?: Array<{
+    emoji: string;
+    count: number;
+  }>;
+}
+
+const { author, content, timestamp, avatar, isEdited = false, reactions = [] } = Astro.props;
+---
+
+<div class="message">
+  <div class="message-avatar">
+    <div class="avatar-inner">{avatar || author.charAt(0).toUpperCase()}</div>
+  </div>
+  
+  <div class="message-content">
+    <div class="message-header">
+      <span class="message-author">{author}</span>
+      <span class="message-timestamp">{timestamp}</span>
+      {isEdited && <span class="edited-indicator">(edited)</span>}
+    </div>
+    
+    <div class="message-text">
+      {content}
+    </div>
+    
+    {reactions.length > 0 && (
+      <div class="message-reactions">
+        {reactions.map((reaction) => (
+          <div class="reaction">
+            <span class="reaction-emoji">{reaction.emoji}</span>
+            <span class="reaction-count">{reaction.count}</span>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</div>
+
+<style>
+  .message {
+    display: flex;
+    gap: 16px;
+    padding: 2px 0;
+    position: relative;
+  }
+
+  .message:hover {
+    background-color: #32353b;
+  }
+
+  .message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #5865f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .avatar-inner {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .message-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .message-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .message-author {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .message-timestamp {
+    font-size: 12px;
+    color: #72767d;
+  }
+
+  .edited-indicator {
+    font-size: 12px;
+    color: #72767d;
+    font-style: italic;
+  }
+
+  .message-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #dcddde;
+    word-wrap: break-word;
+  }
+
+  .message-reactions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  .reaction {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #2f3136;
+    border: 1px solid #202225;
+    border-radius: 12px;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .reaction:hover {
+    background-color: #393c43;
+  }
+
+  .reaction-emoji {
+    font-size: 16px;
+  }
+
+  .reaction-count {
+    font-size: 12px;
+    color: #b9bbbe;
+    font-weight: 500;
+  }
+</style>

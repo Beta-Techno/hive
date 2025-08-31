@@ -1,0 +1,478 @@
+---
+// Discord Layout Component
+---
+
+<div class="discord-layout">
+  <!-- Server Bar (Far Left) -->
+  <div class="server-bar">
+    <div class="server-icon active">
+      <div class="server-icon-inner">UBI</div>
+    </div>
+    <div class="server-separator"></div>
+    <div class="server-icon">
+      <div class="server-icon-inner">+</div>
+    </div>
+  </div>
+
+  <!-- Channel Sidebar (Left) -->
+  <div class="channel-sidebar">
+    <div class="server-header">
+      <h2 class="server-name">UBI Discussion</h2>
+      <div class="server-dropdown">▼</div>
+    </div>
+    
+    <div class="channel-list">
+      <div class="channel-category">
+        <div class="category-header">
+          <span class="category-icon">▼</span>
+          <span class="category-name">TEXT CHANNELS</span>
+        </div>
+        <div class="channels">
+          <div class="channel active">
+            <span class="channel-icon">#</span>
+            <span class="channel-name">general</span>
+          </div>
+          <div class="channel">
+            <span class="channel-icon">#</span>
+            <span class="channel-name">ubi-policy</span>
+          </div>
+          <div class="channel">
+            <span class="channel-icon">#</span>
+            <span class="channel-name">economics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-info">
+      <div class="user-avatar">
+        <div class="avatar-inner">U</div>
+      </div>
+      <div class="user-details">
+        <div class="username">User</div>
+        <div class="user-status">Online</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Chat Area (Center) -->
+  <div class="main-chat">
+    <div class="chat-header">
+      <div class="channel-info">
+        <span class="channel-icon">#</span>
+        <span class="channel-name">general</span>
+      </div>
+      <div class="channel-actions">
+        <button class="action-btn">🔔</button>
+        <button class="action-btn">📌</button>
+        <button class="action-btn">👥</button>
+        <button class="action-btn">🔍</button>
+      </div>
+    </div>
+
+    <div class="messages-container">
+      <div class="messages">
+        <slot />
+      </div>
+    </div>
+
+    <div class="message-input-container">
+      <div class="message-input-wrapper">
+        <button class="attachment-btn">+</button>
+        <input type="text" class="message-input" placeholder="Message #general" />
+        <button class="emoji-btn">😊</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Sidebar (Right) -->
+  <div class="user-sidebar">
+    <div class="sidebar-header">
+      <h3>Online — 3</h3>
+    </div>
+    
+    <div class="user-list">
+      <div class="user-item">
+        <div class="user-avatar online">
+          <div class="avatar-inner">A</div>
+        </div>
+        <div class="user-info">
+          <div class="username">Anonymous</div>
+          <div class="user-activity">Discussing UBI</div>
+        </div>
+      </div>
+      
+      <div class="user-item">
+        <div class="user-avatar online">
+          <div class="avatar-inner">B</div>
+        </div>
+        <div class="user-info">
+          <div class="username">Economist</div>
+          <div class="user-activity">Reading policy docs</div>
+        </div>
+      </div>
+      
+      <div class="user-item">
+        <div class="user-avatar idle">
+          <div class="avatar-inner">C</div>
+        </div>
+        <div class="user-info">
+          <div class="username">Policy Wonk</div>
+          <div class="user-activity">Idle</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .discord-layout {
+    display: grid;
+    grid-template-columns: 72px 240px 1fr 240px;
+    height: 100vh;
+    background-color: #36393f;
+    color: #dcddde;
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  /* Server Bar */
+  .server-bar {
+    background-color: #202225;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+    gap: 8px;
+  }
+
+  .server-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #36393f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .server-icon:hover {
+    background-color: #5865f2;
+    border-radius: 16px;
+  }
+
+  .server-icon.active {
+    background-color: #5865f2;
+    border-radius: 16px;
+  }
+
+  .server-icon.active::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    width: 8px;
+    height: 40px;
+    background-color: white;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .server-icon-inner {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .server-separator {
+    width: 32px;
+    height: 2px;
+    background-color: #36393f;
+    border-radius: 1px;
+  }
+
+  /* Channel Sidebar */
+  .channel-sidebar {
+    background-color: #2f3136;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .server-header {
+    height: 48px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #202225;
+    cursor: pointer;
+  }
+
+  .server-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .server-dropdown {
+    color: #b9bbbe;
+    font-size: 12px;
+  }
+
+  .channel-list {
+    flex: 1;
+    padding: 8px 0;
+  }
+
+  .channel-category {
+    margin-bottom: 16px;
+  }
+
+  .category-header {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #96989d;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .category-icon {
+    font-size: 10px;
+  }
+
+  .channels {
+    margin-top: 4px;
+  }
+
+  .channel {
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 8px;
+  }
+
+  .channel:hover {
+    background-color: #36393f;
+  }
+
+  .channel.active {
+    background-color: #393c43;
+  }
+
+  .channel-icon {
+    color: #96989d;
+    font-size: 20px;
+  }
+
+  .channel-name {
+    font-size: 14px;
+    color: #96989d;
+  }
+
+  .channel.active .channel-name {
+    color: #dcddde;
+  }
+
+  .user-info {
+    height: 52px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #292b2f;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #5865f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .avatar-inner {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .user-details {
+    flex: 1;
+  }
+
+  .username {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .user-status {
+    font-size: 12px;
+    color: #b9bbbe;
+  }
+
+  /* Main Chat */
+  .main-chat {
+    display: flex;
+    flex-direction: column;
+    background-color: #36393f;
+  }
+
+  .chat-header {
+    height: 48px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #202225;
+  }
+
+  .channel-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .channel-actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  .action-btn {
+    background: none;
+    border: none;
+    color: #b9bbbe;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .action-btn:hover {
+    color: #dcddde;
+  }
+
+  .messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .message-input-container {
+    padding: 0 16px 24px;
+  }
+
+  .message-input-wrapper {
+    background-color: #40444b;
+    border-radius: 8px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .attachment-btn, .emoji-btn {
+    background: none;
+    border: none;
+    color: #b9bbbe;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .message-input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #dcddde;
+    font-size: 14px;
+    padding: 12px 0;
+    outline: none;
+  }
+
+  .message-input::placeholder {
+    color: #72767d;
+  }
+
+  /* User Sidebar */
+  .user-sidebar {
+    background-color: #2f3136;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-header {
+    height: 48px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #202225;
+  }
+
+  .sidebar-header h3 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #96989d;
+    margin: 0;
+  }
+
+  .user-list {
+    flex: 1;
+    padding: 8px 0;
+  }
+
+  .user-item {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+
+  .user-item:hover {
+    background-color: #36393f;
+  }
+
+  .user-avatar.online::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #43b581;
+    border: 3px solid #2f3136;
+    border-radius: 50%;
+  }
+
+  .user-avatar.idle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #faa61a;
+    border: 3px solid #2f3136;
+    border-radius: 50%;
+  }
+
+  .user-activity {
+    font-size: 12px;
+    color: #b9bbbe;
+  }
+</style>
