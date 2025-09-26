@@ -1,0 +1,59 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Economist",
+      "content": "Let's analyze the macroeconomic effects. The Roosevelt Institute study found that a $1000/month UBI would increase GDP by 12.56% over 8 years. That's massive economic stimulus.",
+      "timestamp": "Today at 4:00 PM",
+      "avatar": "E",
+      "reactions": [
+        { "emoji": "📈", "count": 5 },
+        { "emoji": "📊", "count": 3 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Anonymous",
+      "content": "But wouldn't that just cause massive inflation? If everyone has more money, won't prices just go up?",
+      "timestamp": "Today at 4:02 PM",
+      "avatar": "A",
+      "reactions": [
+        { "emoji": "🤔", "count": 2 },
+        { "emoji": "💸", "count": 1 }
+      ]
+    },
+    {
+      "id": "3",
+      "author": "Economist",
+      "content": "This is a common misconception. UBI is redistributive, not inflationary. It moves money from high savers (wealthy) to high spenders (poor/middle class). The total money supply doesn't increase - it just circulates more efficiently.",
+      "timestamp": "Today at 4:05 PM",
+      "avatar": "E",
+      "reactions": [
+        { "emoji": "🔄", "count": 4 },
+        { "emoji": "💡", "count": 3 }
+      ]
+    },
+    {
+      "id": "4",
+      "author": "Policy Wonk",
+      "content": "Plus, the velocity of money increases dramatically. Poor people spend their money immediately on necessities, which creates demand and jobs. Rich people often just save or invest in assets.",
+      "timestamp": "Today at 4:07 PM",
+      "avatar": "P",
+      "reactions": [
+        { "emoji": "⚡", "count": 3 },
+        { "emoji": "🏪", "count": 2 }
+      ]
+    },
+    {
+      "id": "5",
+      "author": "Anonymous",
+      "content": "That makes sense. So it's not creating new money, just making existing money work harder for the economy?",
+      "timestamp": "Today at 4:09 PM",
+      "avatar": "A",
+      "reactions": [
+        { "emoji": "✅", "count": 3 },
+        { "emoji": "🎯", "count": 2 }
+      ]
+    }
+  ]
+}

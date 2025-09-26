@@ -1,21 +1,4 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import DiscordLayout from '../components/DiscordLayout.astro';
-import Message from '../components/Message.astro';
-import messages from '../data/messages.json';
+// Redirect to general channel
+return Astro.redirect('/channels/general');
 ---
-
-<Layout>
-  <DiscordLayout>
-    {messages.messages.map((message) => (
-      <Message
-        author={message.author}
-        content={message.content}
-        timestamp={message.timestamp}
-        avatar={message.avatar}
-        isEdited={message.isEdited}
-        reactions={message.reactions}
-      />
-    ))}
-  </DiscordLayout>
-</Layout>

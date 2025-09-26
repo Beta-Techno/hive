@@ -1,5 +1,10 @@
 ---
 // Discord Layout Component
+export interface Props {
+  channel?: string;
+}
+
+const { channel = 'general' } = Astro.props;
 ---
 
 <div class="discord-layout">
@@ -28,18 +33,18 @@
           <span class="category-name">TEXT CHANNELS</span>
         </div>
         <div class="channels">
-          <div class="channel active">
+          <a href="/channels/general" class={`channel ${channel === 'general' ? 'active' : ''}`}>
             <span class="channel-icon">#</span>
             <span class="channel-name">general</span>
-          </div>
-          <div class="channel">
+          </a>
+          <a href="/channels/ubi-policy" class={`channel ${channel === 'ubi-policy' ? 'active' : ''}`}>
             <span class="channel-icon">#</span>
             <span class="channel-name">ubi-policy</span>
-          </div>
-          <div class="channel">
+          </a>
+          <a href="/channels/economics" class={`channel ${channel === 'economics' ? 'active' : ''}`}>
             <span class="channel-icon">#</span>
             <span class="channel-name">economics</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -60,7 +65,7 @@
     <div class="chat-header">
       <div class="channel-info">
         <span class="channel-icon">#</span>
-        <span class="channel-name">general</span>
+        <span class="channel-name">{channel}</span>
       </div>
       <div class="channel-actions">
         <button class="action-btn">🔔</button>
@@ -79,7 +84,7 @@
     <div class="message-input-container">
       <div class="message-input-wrapper">
         <button class="attachment-btn">+</button>
-        <input type="text" class="message-input" placeholder="Message #general" />
+        <input type="text" class="message-input" placeholder={`Message #${channel}`} />
         <button class="emoji-btn">😊</button>
       </div>
     </div>
@@ -256,6 +261,8 @@
     cursor: pointer;
     border-radius: 4px;
     margin: 0 8px;
+    text-decoration: none;
+    color: inherit;
   }
 
   .channel:hover {
