@@ -1,0 +1,36 @@
+{
+  "messages": [
+    {
+      "id": "dm1",
+      "authorId": "karl",
+      "content": "I've been thinking about the economic implications of UBI. What's your take on the funding mechanisms?",
+      "timestamp": "Yesterday at 4:15 PM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm2", 
+      "authorId": "user",
+      "content": "That's a great question! I think progressive taxation combined with carbon taxes could be effective.",
+      "timestamp": "Yesterday at 4:18 PM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm3",
+      "authorId": "karl",
+      "content": "Interesting approach. Have you looked into the Alaska Permanent Fund model?",
+      "timestamp": "Yesterday at 4:22 PM", 
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm4",
+      "authorId": "user",
+      "content": "Yes! The resource-based approach is fascinating. It shows how natural resource wealth can be shared equitably.",
+      "timestamp": "Yesterday at 4:25 PM",
+      "isEdited": false,
+      "reactions": []
+    }
+  ]
+}

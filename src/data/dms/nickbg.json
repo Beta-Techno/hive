@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "id": "dm1",
+      "authorId": "nickbg",
+      "content": "Hey! I read your analysis on the psychology of UBI. Really insightful work.",
+      "timestamp": "1 week ago at 9:15 AM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm2", 
+      "authorId": "user",
+      "content": "Thanks! I'm particularly interested in how financial security affects decision-making patterns.",
+      "timestamp": "1 week ago at 9:20 AM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm3",
+      "authorId": "nickbg",
+      "content": "That's a crucial angle. The stress of financial insecurity really does cloud judgment and limit long-term thinking.",
+      "timestamp": "1 week ago at 9:25 AM", 
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm4",
+      "authorId": "user",
+      "content": "Exactly! When you're constantly worried about basic needs, it's hard to focus on personal development or community building.",
+      "timestamp": "1 week ago at 9:30 AM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm5",
+      "authorId": "nickbg",
+      "content": "UBI could be a game-changer for mental health and social cohesion. The psychological benefits might be just as important as the economic ones.",
+      "timestamp": "1 week ago at 9:35 AM",
+      "isEdited": false,
+      "reactions": []
+    }
+  ]
+}

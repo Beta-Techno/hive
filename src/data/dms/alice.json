@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "id": "dm1",
+      "authorId": "alice",
+      "content": "Hey! How's the UBI research going?",
+      "timestamp": "Today at 2:30 PM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm2", 
+      "authorId": "user",
+      "content": "It's going well! I've been reading some interesting papers on basic income experiments.",
+      "timestamp": "Today at 2:32 PM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm3",
+      "authorId": "alice",
+      "content": "That's fascinating! What are the key findings so far?",
+      "timestamp": "Today at 2:35 PM", 
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm4",
+      "authorId": "user",
+      "content": "The Finnish experiment showed improved mental health and reduced stress, while the Kenyan study demonstrated increased entrepreneurship.",
+      "timestamp": "Today at 2:38 PM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm5",
+      "authorId": "alice", 
+      "content": "Those are really promising results! Do you think we could implement something similar?",
+      "timestamp": "Today at 2:42 PM",
+      "isEdited": false,
+      "reactions": []
+    }
+  ]
+}

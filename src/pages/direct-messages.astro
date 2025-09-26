@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DirectMessagesLayout from '../components/DirectMessagesLayout.astro';
+import Message from '../components/Message.astro';
+
+// Load messages for direct messages (we'll create this data file)
+let messages = [];
+try {
+  const dmData = await import('../data/direct-messages.json');
+  messages = dmData.default.messages || [];
+} catch (error) {
+  // Fallback to empty messages if DM data doesn't exist
+  messages = [];
+}
+---
+
+<Layout>
+  <DirectMessagesLayout channel="home">
+    <div class="dm-welcome">
+      <div class="dm-welcome-icon">💬</div>
+      <div class="dm-welcome-info">
+        <h2>Your direct messages</h2>
+        <p>Select a conversation from the sidebar to start messaging, or start a new conversation.</p>
+      </div>
+    </div>
+  </DirectMessagesLayout>
+</Layout>
+
+<style>
+  .dm-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 400px;
+  }
+
+  .dm-welcome-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+
+  .dm-welcome-info h2 {
+    color: var(--discord-text-normal);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+
+  .dm-welcome-info p {
+    color: var(--discord-text-muted);
+    font-size: 16px;
+    margin: 0;
+    max-width: 400px;
+  }
+</style>

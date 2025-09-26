@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "id": "dm1",
+      "authorId": "scott",
+      "content": "Hey! I saw your post about AI consciousness. Really thought-provoking stuff.",
+      "timestamp": "2 days ago at 11:30 AM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm2", 
+      "authorId": "user",
+      "content": "Thanks! I've been diving deep into the philosophical implications. What's your perspective on machine consciousness?",
+      "timestamp": "2 days ago at 11:35 AM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm3",
+      "authorId": "scott",
+      "content": "I think we need to be careful about anthropomorphizing AI. But the emergence of complex behaviors is definitely worth studying.",
+      "timestamp": "2 days ago at 11:40 AM", 
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm4",
+      "authorId": "user",
+      "content": "Absolutely. The line between complex automation and genuine consciousness is blurry. How do we even define consciousness?",
+      "timestamp": "2 days ago at 11:45 AM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm5",
+      "authorId": "scott",
+      "content": "That's the million-dollar question! Maybe we need to look at it from a functional perspective rather than trying to replicate human experience.",
+      "timestamp": "2 days ago at 11:50 AM",
+      "isEdited": false,
+      "reactions": []
+    }
+  ]
+}

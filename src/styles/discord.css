@@ -1,0 +1,61 @@
+:root {
+  /* Discord Color Palette */
+  --discord-bg-primary: #1a1a1e;
+  --discord-bg-secondary: #121214;
+  --discord-bg-tertiary: #202225;
+  --discord-bg-quaternary: #292b2f;
+  --discord-bg-modifier-hover: #4f545c;
+  --discord-bg-modifier-active: #5d6269;
+  --discord-bg-modifier-selected: #393c43;
+  
+  --discord-text-normal: #dcddde;
+  --discord-text-muted: #72767d;
+  --discord-text-link: #00b0f4;
+  --discord-text-positive: #43b581;
+  --discord-text-warning: #faa61a;
+  --discord-text-danger: #f04747;
+  
+  --discord-interactive-normal: #b9bbbe;
+  --discord-interactive-hover: #dcddde;
+  --discord-interactive-active: #fff;
+  --discord-interactive-muted: #4f545c;
+  
+  --discord-accent: #5865f2;
+  --discord-accent-hover: #4752c4;
+  --discord-accent-active: #3c45a5;
+  
+  --discord-elevation-low: #2f3136;
+  --discord-elevation-medium: #36393f;
+  --discord-elevation-high: #40444b;
+  --discord-elevation-floating: #202225;
+  
+  --discord-scrollbar-thin-thumb: #202225;
+  --discord-scrollbar-thin-track: #2f3136;
+  --discord-scrollbar-auto-thumb: #202225;
+  --discord-scrollbar-auto-track: #2f3136;
+  --discord-scrollbar-auto-scrollbar-color-thumb: #202225;
+  --discord-scrollbar-auto-scrollbar-color-track: #2f3136;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.discord-layout {
+  display: grid;
+  grid-template-areas: 
+    "top-bar top-bar top-bar top-bar"
+    "server-bar channel-sidebar main-chat user-sidebar";
+  grid-template-columns: 72px 240px 1fr 240px;
+  grid-template-rows: 32px 1fr;
+  height: 100vh;
+  background-color: var(--discord-bg-primary);
+  color: var(--discord-text-normal);
+  font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

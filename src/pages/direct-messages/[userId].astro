@@ -1,0 +1,182 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DirectMessagesLayout from '../../components/DirectMessagesLayout.astro';
+import Message from '../../components/Message.astro';
+import users from '../../data/users.json';
+
+// Define types
+interface MessageData {
+  id: string;
+  authorId: string;
+  content: string;
+  timestamp: string;
+  isEdited?: boolean;
+  reactions?: Array<{
+    emoji: string;
+    count: number;
+  }>;
+}
+
+// Get user ID from URL params
+export async function getStaticPaths() {
+  // Create paths for specific users who have DMs
+  const dmUsers = ['kodama', 'alice', 'karl', 'scott', 'sato', 'nickbg'];
+  
+  return dmUsers.map(userId => ({
+    params: { userId }
+  }));
+}
+
+const { userId } = Astro.params;
+
+// Find the user
+const user = users.users.find(u => u.id === userId);
+
+// Load messages for this specific user
+let messages: MessageData[] = [];
+
+if (userId === 'kodama') {
+  // Fetch conversation history from HiveMind API
+  try {
+    const response = await fetch('http://localhost:8000/events/recent?limit=20');
+    if (response.ok) {
+      const events = await response.json();
+      
+      // Convert HiveMind events to Discord-style messages
+      messages = events
+        .filter((event: any) => 
+          event.type === 'llm_response' || 
+          event.type === 'session_complete' ||
+          event.type === 'user_input'
+        )
+        .map((event: any, index: number) => {
+          let content = '';
+          let authorId = 'kodama';
+          
+          if (event.type === 'user_input') {
+            content = event.data.text || '';
+            authorId = 'nickbg'; // Current user
+          } else if (event.type === 'llm_response') {
+            content = event.data.text || '';
+            authorId = 'kodama';
+          } else if (event.type === 'session_complete') {
+            content = event.data.final_text || '';
+            authorId = 'kodama';
+          }
+          
+          // Convert timestamp to readable format
+          const date = new Date(event.timestamp * 1000);
+          const timestamp = date.toLocaleTimeString('en-US', { 
+            hour: 'numeric', 
+            minute: '2-digit',
+            hour12: true 
+          });
+          
+          return {
+            id: `hivemind_${index}`,
+            authorId,
+            content,
+            timestamp,
+            isEdited: false,
+            reactions: []
+          };
+        })
+        .filter((msg: MessageData) => msg.content.trim().length > 0)
+        .reverse(); // Show oldest first
+    }
+  } catch (error) {
+    console.error('Failed to fetch HiveMind history:', error);
+    // Fallback to static data
+    try {
+      const dmData = await import(`../../data/dms/${userId}.json`);
+      messages = dmData.default.messages || [];
+    } catch (fallbackError) {
+      messages = [];
+    }
+  }
+} else {
+  // Use static data for other users
+  try {
+    const dmData = await import(`../../data/dms/${userId}.json`);
+    messages = dmData.default.messages || [];
+  } catch (error) {
+    // Fallback to empty messages if DM data doesn't exist
+    messages = [];
+  }
+}
+---
+
+<Layout>
+  <DirectMessagesLayout channel={userId}>
+    {user && messages.length === 0 && (
+      <div class="dm-welcome">
+        <div class="dm-welcome-avatar">
+          {user.avatarImage ? (
+            <img src={user.avatarImage} alt={user.displayName} class="avatar-image" />
+          ) : (
+            <img src="/avatars/Egg.jpg" alt={user.displayName} class="avatar-image fallback-avatar" />
+          )}
+        </div>
+        <div class="dm-welcome-info">
+          <h2>{user.displayName}</h2>
+          <p>This is the beginning of your direct message history with {user.displayName}.</p>
+        </div>
+      </div>
+    )}
+    
+    {messages.map((message) => (
+      <Message
+        authorId={message.authorId}
+        content={message.content}
+        timestamp={message.timestamp}
+        isEdited={message.isEdited}
+        reactions={message.reactions}
+      />
+    ))}
+  </DirectMessagesLayout>
+</Layout>
+
+<style>
+  .dm-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 200px;
+  }
+
+  .dm-welcome-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  .dm-welcome-avatar .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .dm-welcome-avatar .fallback-avatar {
+    opacity: 0.8;
+    filter: grayscale(20%);
+  }
+
+  .dm-welcome-info h2 {
+    color: var(--discord-text-normal);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+
+  .dm-welcome-info p {
+    color: var(--discord-text-muted);
+    font-size: 16px;
+    margin: 0;
+    max-width: 400px;
+  }
+</style>

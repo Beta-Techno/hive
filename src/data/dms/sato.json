@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "id": "dm1",
+      "authorId": "sato",
+      "content": "I've been working on a new coding project. Want to collaborate?",
+      "timestamp": "3 days ago at 3:20 PM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm2", 
+      "authorId": "user",
+      "content": "Sure! What kind of project are you working on?",
+      "timestamp": "3 days ago at 3:25 PM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm3",
+      "authorId": "sato",
+      "content": "It's a web app for tracking UBI experiments around the world. I'm building it with React and Node.js.",
+      "timestamp": "3 days ago at 3:28 PM", 
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm4",
+      "authorId": "user",
+      "content": "That sounds amazing! I'd love to help with the data visualization aspects.",
+      "timestamp": "3 days ago at 3:32 PM",
+      "isEdited": false,
+      "reactions": []
+    },
+    {
+      "id": "dm5",
+      "authorId": "sato",
+      "content": "Perfect! I'll send you the GitHub repo link. We could use some help with the charts and graphs.",
+      "timestamp": "3 days ago at 3:35 PM",
+      "isEdited": false,
+      "reactions": []
+    }
+  ]
+}

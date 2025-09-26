@@ -1,0 +1,130 @@
+---
+import servers from '../data/servers.json';
+
+export interface Props {
+  activeServer?: string;
+  isDMPage?: boolean;
+}
+
+const { activeServer = '', isDMPage = false } = Astro.props;
+---
+
+<div class="server-bar">
+  <!-- Discord Home Icon -->
+  <a href="/direct-messages" class={`server-icon home-icon ${isDMPage ? 'active' : ''}`}>
+    <div class="server-icon-inner">
+      <img src="/icons/svg/discord-logo.svg" alt="Discord" class="discord-logo" />
+    </div>
+  </a>
+  
+  <div class="server-separator"></div>
+  
+  {servers.servers.map((serverItem) => (
+    <a href={`/servers/${serverItem.id}/${serverItem.categories[0].channels[0].id}`} class={`server-icon ${serverItem.id === activeServer ? 'active' : ''}`}>
+      {serverItem.id === activeServer && (
+        <div class="active-server-bar"></div>
+      )}
+      <div class="server-icon-inner">
+        {serverItem.icon.endsWith('.png') ? (
+          <img src={serverItem.icon} alt={serverItem.name} class="server-icon-image" />
+        ) : (
+          serverItem.icon
+        )}
+      </div>
+    </a>
+  ))}
+  
+  <div class="server-separator"></div>
+  <div class="server-icon">
+    <div class="server-icon-inner">+</div>
+  </div>
+</div>
+
+<style>
+  .server-bar {
+    grid-area: server-bar;
+    background-color: var(--discord-bg-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+    gap: 8px;
+    overflow: visible;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+
+  .active-server-bar {
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 26px;
+    background-color: white;
+    border-radius: 0 2px 2px 0;
+    z-index: 10;
+  }
+
+  .server-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--discord-bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .server-icon:hover {
+    background-color: var(--discord-accent);
+    border-radius: 50%;
+  }
+
+  .server-icon.active {
+    background-color: transparent;
+  }
+
+  .home-icon {
+    background-color: var(--discord-accent);
+  }
+
+  .home-icon:hover {
+    background-color: var(--discord-accent-hover);
+  }
+
+  .home-icon .server-icon-inner {
+    color: white;
+  }
+
+  .discord-logo {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+  }
+
+  .server-icon-inner {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .server-icon-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .server-separator {
+    width: 32px;
+    height: 2px;
+    background-color: var(--discord-bg-primary);
+    border-radius: 1px;
+  }
+</style>

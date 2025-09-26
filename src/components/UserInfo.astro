@@ -1,0 +1,148 @@
+---
+import users from '../data/users.json';
+
+export interface Props {
+  userId?: string;
+  className?: string;
+}
+
+const { userId = 'nickbg', className = '' } = Astro.props;
+
+// Get the current user
+const currentUser = users.users.find(u => u.id === userId) || {
+  id: userId,
+  username: userId,
+  displayName: userId,
+  avatar: userId.charAt(0).toUpperCase(),
+  avatarColor: '#5865f2',
+  avatarImage: undefined,
+  status: 'online',
+  roles: ['member'],
+  joinedAt: new Date().toISOString(),
+  bio: 'User'
+};
+---
+
+<div class={`user-info-panel ${className}`}>
+  <div class="user-avatar" style={`background-color: ${currentUser.avatarColor}`}>
+    {currentUser.avatarImage ? (
+      <img src={currentUser.avatarImage} alt={currentUser.displayName} class="avatar-image" onerror="this.src='/avatars/Egg.jpg'" />
+    ) : (
+      <img src="/avatars/Egg.jpg" alt={currentUser.displayName} class="avatar-image fallback-avatar" />
+    )}
+  </div>
+    <div class="user-details">
+      <div class="username">{currentUser.displayName}</div>
+      <div class="user-status">
+        {currentUser.status === 'online' ? 'Online' : 
+         currentUser.status === 'idle' ? 'Idle' : 
+         currentUser.status === 'dnd' ? 'Do Not Disturb' : 'Offline'}
+      </div>
+    </div>
+    
+    <div class="user-actions">
+      <button class="action-icon">
+        <img src="/icons/svg/microphone.svg" alt="Microphone" class="icon" />
+      </button>
+      <button class="action-icon">
+        <img src="/icons/svg/headset.svg" alt="Headset" class="icon" />
+      </button>
+      <button class="action-icon">
+        <img src="/icons/svg/settings.svg" alt="Settings" class="icon" />
+      </button>
+    </div>
+</div>
+
+<style>
+  .user-info-panel {
+    height: 46px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #202024;
+    border-radius: 8px;
+    margin: 0 16px 24px 16px;
+    position: absolute;
+    bottom: 0;
+    left: -72px; /* Span into server bar */
+    width: 280px; /* 72px (server bar) + 208px (channel sidebar) */
+    z-index: 10;
+  }
+
+  .user-info-panel .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--discord-bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .user-info-panel .user-avatar .avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .user-info-panel .user-avatar .fallback-avatar {
+    opacity: 0.8;
+    filter: grayscale(20%);
+  }
+
+  .user-info-panel .avatar-inner {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .user-info-panel .user-details {
+    flex: 1;
+  }
+
+  .user-info-panel .username {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .user-info-panel .user-status {
+    font-size: 12px;
+    color: var(--discord-interactive-normal);
+  }
+
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+  }
+
+  .action-icon {
+    background: none;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+
+  .action-icon:hover {
+    background-color: var(--discord-bg-modifier-hover);
+  }
+
+  .action-icon .icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    fill: white;
+    stroke: none;
+  }
+</style>

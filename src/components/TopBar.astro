@@ -1,0 +1,106 @@
+---
+// No props needed for now, but can be extended later
+---
+
+<div class="top-bar">
+  <div class="top-bar-left">
+    <div class="app-title">Discord</div>
+  </div>
+  <div class="top-bar-center">
+    <div class="search-bar">
+      <input type="text" placeholder="Search" class="search-input" />
+    </div>
+  </div>
+    <div class="top-bar-right">
+      <button class="top-bar-btn">
+        <img src="/icons/svg/inbox.svg" alt="Inbox" class="top-bar-icon" />
+      </button>
+      <button class="top-bar-btn">
+        <img src="/icons/svg/question-mark.svg" alt="Help" class="top-bar-icon" />
+      </button>
+    </div>
+</div>
+
+<style>
+  .top-bar {
+    grid-area: top-bar;
+    background-color: var(--discord-bg-secondary);
+    border-bottom: 1px solid var(--discord-bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 32px;
+  }
+
+  .top-bar-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--discord-text-normal);
+  }
+
+  .top-bar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .search-input {
+    width: 100%;
+    background-color: var(--discord-bg-primary);
+    border: 1px solid var(--discord-bg-tertiary);
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: var(--discord-text-normal);
+    font-size: 12px;
+    outline: none;
+  }
+
+  .search-input::placeholder {
+    color: var(--discord-text-muted);
+  }
+
+  .search-input:focus {
+    border-color: var(--discord-accent);
+  }
+
+  .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .top-bar-btn {
+    background: none;
+    border: none;
+    color: var(--discord-interactive-normal);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+
+  .top-bar-btn:hover {
+    background-color: var(--discord-bg-modifier-hover);
+    color: var(--discord-interactive-hover);
+  }
+
+  .top-bar-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  }
+</style>

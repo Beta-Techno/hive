@@ -197,16 +197,28 @@
       "joinedAt": "2024-01-01T00:00:00Z",
       "bio": "System tool for AI agent interactions"
     },
-    {
-      "id": "beta-techno",
-      "username": "Beta Techno",
-      "displayName": "Beta Techno",
-      "avatar": "B",
-      "avatarColor": "#5865f2",
-      "status": "online",
-      "roles": ["bot", "system"],
-      "joinedAt": "2024-01-01T00:00:00Z",
-      "bio": "System bot for Beta Techno server"
-    }
+      {
+        "id": "beta-techno",
+        "username": "Beta Techno",
+        "displayName": "Beta Techno",
+        "avatar": "B",
+        "avatarColor": "#5865f2",
+        "status": "online",
+        "roles": ["bot", "system"],
+        "joinedAt": "2024-01-01T00:00:00Z",
+        "bio": "System bot for Beta Techno server"
+      },
+      {
+        "id": "kodama",
+        "username": "Kodama",
+        "displayName": "Kodama",
+        "avatar": "K",
+        "avatarColor": "#faa61a",
+        "avatarImage": "/avatars/Kodama.webp",
+        "status": "online",
+        "roles": ["bot", "ai"],
+        "joinedAt": "2024-01-20T00:00:00Z",
+        "bio": "AI agent with multi-perspective reasoning and tool use capabilities"
+      }
   ]
 }
