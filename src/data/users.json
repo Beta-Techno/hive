@@ -1,0 +1,135 @@
+{
+  "users": [
+    {
+      "id": "alice",
+      "username": "Alice",
+      "displayName": "Alice",
+      "avatar": "A",
+      "avatarColor": "#5865f2",
+      "avatarImage": "/avatars/Alice.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-15T10:00:00Z",
+      "bio": "Crystal clear thinking, diamond sharp insights"
+    },
+    {
+      "id": "karl",
+      "username": "Karl",
+      "displayName": "Karl",
+      "avatar": "K",
+      "avatarColor": "#43b581",
+      "avatarImage": "/avatars/Karl.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-10T09:00:00Z",
+      "bio": "Thoughtful contributor to discussions"
+    },
+    {
+      "id": "nickbg",
+      "username": "nickbg",
+      "displayName": "nickbg",
+      "avatar": "N",
+      "avatarColor": "#faa61a",
+      "avatarImage": "/avatars/nickbg.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-12T14:30:00Z",
+      "bio": "Background thinker, foreground insights"
+    },
+    {
+      "id": "scott",
+      "username": "Scott",
+      "displayName": "Scott",
+      "avatar": "S",
+      "avatarColor": "#ed4245",
+      "avatarImage": "/avatars/Scott.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-05T08:00:00Z",
+      "bio": "Clear communicator and problem solver"
+    },
+    {
+      "id": "sato",
+      "username": "Sato",
+      "displayName": "Sato",
+      "avatar": "S",
+      "avatarColor": "#5865f2",
+      "avatarImage": "/avatars/Sato.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-08T11:15:00Z",
+      "bio": "Bringing unique perspectives to the conversation"
+    },
+    {
+      "id": "tombombadeel",
+      "username": "tombombadeel",
+      "displayName": "tombombadeel",
+      "avatar": "T",
+      "avatarColor": "#43b581",
+      "avatarImage": "/avatars/tombombadeel.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-08T11:20:00Z",
+      "bio": "Explosive ideas, thoughtful delivery"
+    },
+    {
+      "id": "eternal-void",
+      "username": "Eternal Void",
+      "displayName": "Eternal Void",
+      "avatar": "E",
+      "avatarColor": "#faa61a",
+      "avatarImage": "/avatars/EternalVoid.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-06T09:30:00Z",
+      "bio": "Infinite curiosity, endless questions"
+    },
+    {
+      "id": "beerus",
+      "username": "Beerus",
+      "displayName": "Beerus",
+      "avatar": "B",
+      "avatarColor": "#5865f2",
+      "avatarImage": "/avatars/Beerus.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-14T16:00:00Z",
+      "bio": "Divine wisdom, mortal discussions"
+    },
+    {
+      "id": "amelie",
+      "username": "Amelie",
+      "displayName": "Amelie",
+      "avatar": "A",
+      "avatarColor": "#43b581",
+      "avatarImage": "/avatars/Amelie.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-13T13:45:00Z",
+      "bio": "Thoughtful participant in meaningful conversations"
+    },
+    {
+      "id": "rellogos",
+      "username": "Rellogos",
+      "displayName": "Rellogos",
+      "avatar": "R",
+      "avatarColor": "#faa61a",
+      "avatarImage": "/avatars/Rellogos.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-16T12:00:00Z",
+      "bio": "Bringing fresh perspectives to the conversation"
+    },
+    {
+      "id": "beta-techno",
+      "username": "Beta Techno",
+      "displayName": "Beta Techno",
+      "avatar": "B",
+      "avatarColor": "#5865f2",
+      "status": "online",
+      "roles": ["bot", "system"],
+      "joinedAt": "2024-01-01T00:00:00Z",
+      "bio": "System bot for Beta Techno server"
+    }
+  ]
+}

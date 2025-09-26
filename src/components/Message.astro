@@ -1,27 +1,63 @@
 ---
+import users from '../data/users.json';
+
 export interface Props {
-  author: string;
+  authorId: string;
   content: string;
   timestamp: string;
-  avatar?: string;
   isEdited?: boolean;
   reactions?: Array<{
     emoji: string;
     count: number;
   }>;
+  thread?: {
+    id: string;
+    messageCount: number;
+    replies: Array<{
+      id: string;
+      authorId: string;
+      content: string;
+      timestamp: string;
+      reactions?: Array<{
+        emoji: string;
+        count: number;
+      }>;
+    }>;
+  };
 }
 
-const { author, content, timestamp, avatar, isEdited = false, reactions = [] } = Astro.props;
+const { 
+  authorId = 'unknown', 
+  content = '', 
+  timestamp = 'Unknown time', 
+  isEdited = false, 
+  reactions = [], 
+  thread 
+} = Astro.props;
+
+// Find user data
+const user = users.users.find(u => u.id === authorId) || {
+  id: authorId || 'unknown',
+  username: authorId || 'unknown',
+  displayName: authorId || 'Unknown User',
+  avatar: (authorId && authorId.charAt(0)) ? authorId.charAt(0).toUpperCase() : '?',
+  avatarColor: '#5865f2',
+  avatarImage: undefined
+};
 ---
 
 <div class="message">
-  <div class="message-avatar">
-    <div class="avatar-inner">{avatar || author.charAt(0).toUpperCase()}</div>
+  <div class="message-avatar" style={`background-color: ${user.avatarColor}`}>
+    {user.avatarImage ? (
+      <img src={user.avatarImage} alt={user.displayName} class="avatar-image" />
+    ) : (
+      <div class="avatar-inner">{user.avatar}</div>
+    )}
   </div>
   
   <div class="message-content">
     <div class="message-header">
-      <span class="message-author">{author}</span>
+      <span class="message-author">{user.displayName}</span>
       <span class="message-timestamp">{timestamp}</span>
       {isEdited && <span class="edited-indicator">(edited)</span>}
     </div>
@@ -30,14 +66,63 @@ const { author, content, timestamp, avatar, isEdited = false, reactions = [] } =
       {content}
     </div>
     
-    {reactions.length > 0 && (
+    {reactions && reactions.length > 0 && (
       <div class="message-reactions">
         {reactions.map((reaction) => (
           <div class="reaction">
-            <span class="reaction-emoji">{reaction.emoji}</span>
-            <span class="reaction-count">{reaction.count}</span>
+            <span class="reaction-emoji">{reaction.emoji || '👍'}</span>
+            <span class="reaction-count">{reaction.count || 0}</span>
           </div>
         ))}
+      </div>
+    )}
+
+    {thread && (
+      <div class="message-thread">
+        <div class="thread-header">
+          <span class="thread-icon">💬</span>
+          <span class="thread-count">{thread.messageCount} replies</span>
+        </div>
+        <div class="thread-replies">
+          {thread.replies && thread.replies.map((reply) => {
+            const replyUser = users.users.find(u => u.id === reply.authorId) || {
+              id: reply.authorId || 'unknown',
+              username: reply.authorId || 'unknown',
+              displayName: reply.authorId || 'Unknown User',
+              avatar: (reply.authorId && reply.authorId.charAt(0)) ? reply.authorId.charAt(0).toUpperCase() : '?',
+              avatarColor: '#5865f2',
+              avatarImage: undefined
+            };
+            return (
+              <div class="thread-reply">
+                <div class="reply-avatar" style={`background-color: ${replyUser.avatarColor}`}>
+                  {replyUser.avatarImage ? (
+                    <img src={replyUser.avatarImage} alt={replyUser.displayName} class="avatar-image" />
+                  ) : (
+                    <div class="avatar-inner">{replyUser.avatar}</div>
+                  )}
+                </div>
+                <div class="reply-content">
+                  <div class="reply-header">
+                    <span class="reply-author">{replyUser.displayName}</span>
+                    <span class="reply-timestamp">{reply.timestamp}</span>
+                  </div>
+                  <div class="reply-text">{reply.content || ''}</div>
+                  {reply.reactions && reply.reactions.length > 0 && (
+                    <div class="reply-reactions">
+                      {reply.reactions.map((reaction) => (
+                        <div class="reaction">
+                          <span class="reaction-emoji">{reaction.emoji || '👍'}</span>
+                          <span class="reaction-count">{reaction.count || 0}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     )}
   </div>
@@ -71,6 +156,13 @@ const { author, content, timestamp, avatar, isEdited = false, reactions = [] } =
     color: white;
     font-weight: bold;
     font-size: 16px;
+  }
+
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   .message-content {
@@ -140,5 +232,114 @@ const { author, content, timestamp, avatar, isEdited = false, reactions = [] } =
     font-size: 12px;
     color: #b9bbbe;
     font-weight: 500;
+  }
+
+  /* Thread Styling */
+  .message-thread {
+    margin-top: 8px;
+    border-left: 2px solid #40444b;
+    padding-left: 16px;
+  }
+
+  .thread-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #b9bbbe;
+    font-size: 12px;
+  }
+
+  .thread-header:hover {
+    color: #dcddde;
+  }
+
+  .thread-icon {
+    font-size: 14px;
+  }
+
+  .thread-count {
+    font-weight: 500;
+  }
+
+  .thread-replies {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .thread-reply {
+    display: flex;
+    gap: 12px;
+    padding: 4px 0;
+  }
+
+  .reply-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .reply-avatar .avatar-inner {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .reply-avatar .avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .reply-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .reply-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+
+  .reply-author {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .reply-timestamp {
+    font-size: 11px;
+    color: #72767d;
+  }
+
+  .reply-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #dcddde;
+    word-wrap: break-word;
+  }
+
+  .reply-reactions {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+
+  .reply-reactions .reaction {
+    background-color: #2f3136;
+    border: 1px solid #202225;
+    border-radius: 10px;
+    padding: 2px 6px;
+    font-size: 11px;
   }
 </style>

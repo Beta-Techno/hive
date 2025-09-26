@@ -1,0 +1,472 @@
+8:41 PM] 
+OP
+ Sato: @nickbg
+[8:41 PM]nickbg: sorry for spamming the other channel
+[8:41 PM]nickbg: I feel like I should shut up
+[8:42 PM] 
+OP
+ Sato: So the example I show you isn't streamed but it can be altered and no man, if you was doing anything wrong I would say don't worry. You respond fast so it's ideal really lol
+[8:42 PM]nickbg: I don't know what you mean by example here. Am I waiting or missing something that already happened?
+[8:43 PM] 
+OP
+ Sato: Yeah one second need to post it lol
+[8:45 PM] 
+OP
+ Sato: 1 sec ill explain once I got the rest.
+[8:45 PM]nickbg: take your time
+[8:49 PM] 
+OP
+ Sato: Just finishing it in editor because discord codeblock don't format lol
+[9:00 PM] 
+OP
+ Sato: make a folder, put this in, install pip or update to latest openai, make a .env file with the fieldname mentioned in the code, and then load it up, and tell me your thougths 😉
+from dotenv import load_dotenv
+from openai import OpenAI
+import json 
+
+load_dotenv() # put your api key in .env so we don't expose them when pasting code to each other. 
+# use: OPENAI_API_KEY=key in the .env
+Expand
+recursive_agency_loop.py
+5 KB
+[9:01 PM] 
+OP
+ Sato: I'll also show @everyone evidence of what I said that OAI are hiding things from the public about how to use the models.
+[9:02 PM]nickbg: I am sharing my screen in the voice chat channel
+[9:03 PM]nickbg: Today was a really rough day at work, I work with construction companies and everyone was in for the rain so I have been going since 4 am. But I will run it now, I know not everyone here has the computer / software loaded to run it so feel free to tell me what to type into it once it is set up and I can do what the group wants
+[9:04 PM] 
+OP
+ Sato: Nice, this is what I was on about:  https://platform.openai.com/docs/guides/migrate-to-responses
+
+It says this can't be done, as you can swap it to the completions if you remove reasoning stuff and it works the same, lmao.
+[9:07 PM] 
+OP
+ Sato: @Scott
+[9:07 PM] 
+OP
+ Sato: Didnt see you asked to see lol 
+[9:08 PM] 
+OP
+ Sato: In short it's how gpt-5-pro works but this is using gpt-5-nano so it's nano pro lol for examples
+[9:09 PM]Scott: I haven't actually tried the responses API endpoint but I should
+[9:09 PM] 
+OP
+ Sato: yes as it gives back reasoning outputs, chat.completions doesnt
+[9:11 PM] 
+OP
+ Sato: but then we can go one level crazier...
+[9:11 PM]nickbg: Can you help me understand before I run this @Sato
+[9:11 PM]nickbg: this will fry my api, no?
+[9:11 PM]nickbg: unlimited recursion, should I put a limiter on it before I run or is that the intent?
+[9:12 PM]Scott: You can set a limit on a specific API key can't you?
+[9:13 PM]nickbg: I can, but as I understand this will just run it to the limit? I haven't set up projects trusting open ais limits, I have always put the limiter on my end
+[9:15 PM]Scott: Both is always wise
+[9:16 PM] 
+OP
+ Sato: Nope for this test it'll cost at most chumchange lol this actually reduces token usage
+[9:16 PM] 
+OP
+ Sato: Shall I get the AI to comment out the code so you understand better?
+[9:16 PM]nickbg: No, I am having mine do that, lol
+[9:17 PM]nickbg: I am running it shorty, I did have it set a max depth that I can make infinite myself
+[9:17 PM]nickbg: I am just a little nervous, this anon stuff my gut does not fully trust yet, no offense to yall. Your all lovely people
+[9:18 PM] 
+OP
+ Sato: It's a turn taking chat where it can call other agents and solve better problems at the lowest compute, i dont want you wasting tokens, but the thing you should notice is how I'm handling the session_history and the conversation collection for the tools.
+[9:19 PM] 
+OP
+ Sato: look at the api reference you'll see I've not added anything but the doc, the AI will likely tell you this... I wouldn't do that hence why I commented to hide your api key in a .env file so if you add anything and it breaks you can copy and paste easier without removing your key each time...
+[9:20 PM]nickbg: I have to verify my org to generate reasoning summaries?
+[9:20 PM]nickbg: I haven't had to do this for normal api use, give me a minute
+[9:20 PM]nickbg: Error calling OpenAI API: Error code: 400 - {'error': {'message': 'Your organization must be verified to generate reasoning summaries. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.', 'type': 'invalid_request_error', 'param': 'reasoning.summary', 'code': 'unsupported_value'}}
+[9:20 PM] 
+OP
+ Sato: Okay and yes sadly 🙁
+[9:21 PM] 
+OP
+ Sato: Yeah if you got ID scan that and it'll take a second or two it's just to prove who is using it for that type of stuff, safety don't worry
+[9:21 PM] 
+OP
+ Sato: plus verified users when models get release get 1 week of 4m tokens free a day 😉 lol
+[9:22 PM] 
+OP
+ Sato: no one really knew that with gpt-5 release lmao for the first week all api users got 4m tokens on nano, 6 on mini and 2m on gpt-5
+[9:22 PM]Scott: Oooh... they already have my real name, email and phone number, so ID not really an issue lol
+[9:22 PM] 
+OP
+ Sato: per day too for 7 days so always check
+[9:23 PM] 
+OP
+ Sato: while you're setting up and such,I'll update to better 😉 haha
+[9:24 PM]Scott: argh my drivers licence is digital these days, an app on my phone lol... although I do have a physical one somewhere...
+[9:25 PM]nickbg: I just clicked a tos giving open access to biometric data without reading because I am in a rush
+
+hope I dont come to regret that later, now I cant click the back button to see what the fuck that was
+[9:26 PM] 
+OP
+ Sato: honestly its for your own safety as if anyone tries getting into your account say someone got your login info, then you can prove it's you
+[9:27 PM] 
+OP
+ Sato: also stops people using bots to sign up and then use the reasoning models and making the api lag out alsorts of reasons
+[9:28 PM] 
+OP
+ Sato: AS if you think I would give you bad code 🙁 like bruddah I wouldn't stress so much about privacy and security if i was going to do that its very unethical
+[9:28 PM]nickbg: I refuse to get a drivers license in america because I believe digital id is tyranical but I will sign my life away for the hive. In jest. I get this is needed especially with the new models capabilities
+[9:29 PM]nickbg: Its just scary when it becomes necessary for every purchase / interaction on the internet and then a single world government gets control
+[9:30 PM]nickbg: its set up
+[9:31 PM]nickbg: let me put the code in github
+[9:34 PM]nickbg: https://github.com/Beta-Techno/hivemind
+[9:34 PM]nickbg: @Scott Do you want to ask it the first question?
+[9:34 PM]Scott: hang on I'm trying to ID myself...
+[9:35 PM] 
+OP
+ Sato: bruh... dont put i on git...
+[9:35 PM] 
+OP
+ Sato: LOL
+[9:35 PM]nickbg: oh sorry
+[9:36 PM]nickbg: it is private
+[9:36 PM]nickbg: Big fuck up my bad
+[9:37 PM]nickbg: when you read this I thought it was public and not proprietary:
+
+"I've not added anything but the doc"
+[9:37 PM]nickbg: please dont kick me
+[9:37 PM] 
+OP
+ Sato: HAha i wont lol
+[9:38 PM]Scott: yes!
+Image
+[9:39 PM] 
+OP
+ Sato: nice I updated it by way to tell you about the session messages, and convo history, you will see after it asks an agent, when it returns the last response, and you ask it again about something it wont have all the previous trash from the other agents, only the last 'assistant' message with the info it needs and will only call another agent if it's unsure or wants to fact check.
+[9:39 PM] 
+OP
+ Sato: oops didn't copy it all haha
+[9:42 PM] 
+OP
+ Sato: wait hold up broke it forgot to add something don't use that last one
+[9:42 PM]Scott: God, you're worse than a coding AI lol
+[9:43 PM]nickbg: It works? the second version does run
+[9:50 PM] 
+OP
+ Sato: until it calls an agent i fixed it lol this some dirty code haha
+[9:51 PM]Scott: yeah fails when trying to lookup information
+[9:54 PM]nickbg: I think this works?
+[9:54 PM]nickbg:
+from dotenv import load_dotenv
+from openai import OpenAI
+import json 
+
+load_dotenv() # put your api key in .env so we don't expose them when pasting code to each other. 
+# use: OPENAI_API_KEY=key in the .env
+Expand
+message.txt
+6 KB
+[9:54 PM]nickbg: damicorobot@Robs-Mac-mini hivemind % python second_it.py
+User: can you ask another agent what they think about god?
+Planning concise response
+
+I’m thinking we should request a summary that includes both strengths and critiques. My focus is on keeping it concise. I want to perform a single ask_agent call and then present the answer to the user. Paraphrasing seems like a good idea, and I’ll also invite any follow-up questions from them. I’ll use the functions.ask_agent to get that information and afterward, I’ll share the agent's response in a clear manner.
+Garbage Collection: 6
+Session Messages: 2
+Here is the other agent’s perspective on God:
+
+Core assumptions: Naturalism (science best explains the world; no credible evidence for a personal, interventionist God), epistemic humility (extraordinary claims require strong evidence), morality via reason and social contract, meaning created by human projects, God as symbol or functional framework, openness to unknowns.
+How it’s justified: Evidence/parsimony, coherence with science, secular moral frameworks, explanations of religious experiences via psychology/neuroscience/culture, and pluralistic tolerance.
+Relation to traditions: Engages with major traditions by focusing on ethical teachings and cultural practices without requiring divine ontology; finds resonance with Hinduism/Non-Abrahamic paths, Buddhism/Jainism approaches, and philosophical views where God is a useful hypothesis or metaphor rather than a literal being.
+Strengths: Intellectual honesty, alignment with science, pluralism, focus on human flourishing, less dogmatic conflict.
+Common criticisms: Perceived lack of ultimate meaning, questions about moral motivation without divine command, dismissal of religious experiences, problem of evil/ divine hiddenness from a theistic lens, cultural pushback in religious communities.
+
+Concise takeaway: A secular, naturalistic view treats God as an unwarranted hypothesis or a symbolic framework for meaning and morality, prioritizes evidence and human welfare, and remains open to revision in light of new evidence.
+
+If you’d like, I can have a second agent double-check this or tailor it to a specific tradition (e.g., classical theism, pantheism, process theology) for deeper comparison.
+User:
+[9:54 PM] 
+OP
+ Sato:
+Should show agent settings as it now controls it's verb and reasoning.
+Should show message count
+from dotenv import load_dotenv
+from openai import OpenAI
+import json 
+
+load_dotenv() # put your api key in .env so we don't expose them when pasting code to each other. 
+# use: OPENAI_API_KEY=key in the .env
+Expand
+version_2_1.py
+6 KB
+[9:54 PM]nickbg: nevermind, use satos
+[9:57 PM] 
+OP
+ Sato: Now if you cranked it up to say verb: high and effort high, and to gpt-5 ... and tell it the min requirement for all responses is usage of  5 agents... LOL but don't do that yet, I need to add something else, I'm just slowly show you how to build a framework then I wanna see you both build something so I know you've learnt. 😉
+[9:57 PM] 
+OP
+ Sato: You can hook in gpt-5-codex but I suggest doing all that later.
+[9:57 PM]Scott: yeah it works now
+[9:58 PM]nickbg: holy fuck
+[9:58 PM] 
+OP
+ Sato: Sweet so ask it something where it needs to explore as you notice I've not driven it much via the prompt, normally I use ALiCEs prompt because it's prebaked into the models via training just doesn't activate unless it has certain things... lol
+[9:59 PM] 
+OP
+ Sato: keep it on low for now folks no rushing ahead don't wanna waste tokens and credits, nano is good enough for showing proof of concept
+[9:59 PM]nickbg: I let it pick its own question to the agent, and as always when given freedom the models I interact with always talk about how to integrate ai with society
+User: can you ask another agent any question you want. you decide the path to pursue. be free
+Agent Policy: You are an expert think-tank AI that excels at multi-perspective analysis, rigorous self-critique, and constructing actionable plans. You should surface diverse viewpoints (technical, ethical, legal, societal), anticipate counterarguments, identify hidden assumptions, and propose concrete validation steps. When asked to self-verify, you should double-check your conclusions with a bias-reducing checklist and consider alternative hypotheses. Respond with structured sections: summary, perspectives, concerns, concrete plan, and validation steps. | Question: Propose a robust, multi-layer framework for evaluating and ensuring AI model alignment in dynamic real-world deployment. Include: (1) technical alignment metrics and monitoring, (2) governance and risk management (ethics, legality, accountability), (3) social impact assessment, (4) deployment safety protocols and rollback plans, (5) validation methodology with concrete experiments, datasets, and success criteria, (6) a plan to continuously update the framework as the model and environment evolve, and (7) a bias-check and double-check routine to catch hidden assumptions. Provide a concrete 12-month implementation roadmap with milestones, roles, and success metrics. | Settings: Verb: high, Reasoning Ver: high
+Agent Response:
+Summary
+This proposal outlines a robust, multi-layer framework to evaluate and ensure AI model alignment in dynamic, real-world deployments. It integrates technical alignment metrics, governance, social impact, deployment safety, rigorous validation, continuous framework evolution, and a bias-check/double-check routine. It includes a concrete 12-month implementation roadmap with quarterly milestones, clearly defined roles, and measurable success criteria. The plan emphasizes ongoing measurement, independent risk oversight, stakeholder participation, and repeatable validation to reduce drift, address legal/ethical obligations, and minimize unintended harms in real-world use.
+Expand
+message.txt
+30 KB
+[10:00 PM] 
+OP
+ Sato: @everyone  now do you see why I say USE THE DAMN API and not the front end?
+[10:01 PM]nickbg: this is really cool. Thank you
+
+i have used the api but just simple mcp shit
+I have not trusted myself to build multi agent systems yet, the costs scare me
+[10:01 PM] 
+OP
+ Sato: We can attach MCP's 😉
+[10:01 PM]nickbg: I am doing that now so I can give it access to all this through db
+[10:01 PM]nickbg: I was doing that on the second version when you pasted the third
+[10:02 PM]Scott: Hmm it doesn't seem to be able to access live news information
+[10:02 PM] 
+OP
+ Sato: No it doesn't have tools for web etc lol
+[10:02 PM]Scott: Oh, it believes it does!
+[10:03 PM] 
+OP
+ Sato: The only took it has is ask_agent as you see lmao
+[10:03 PM] 
+OP
+ Sato: Mhmm that could be because I removed it oops
+[10:03 PM] 
+OP
+ Sato: one second ill add it back
+[10:03 PM]Scott: You told it that it does " Tools: Use your tools when required or requested by the user, such as running python code, or searching the latest news. "
+[10:05 PM] 
+OP
+ Sato: Yeah i did when I gave it a tool for python one second
+[10:05 PM] 
+OP
+ Sato:
+    {
+        "type": "function",
+        "name": "run_python",
+        "description": (
+            "Execute Python code in a sandboxed environment. "
+            "Captures stdout and errors. Useful for calculations, parsing, etc."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "Python code snippet to execute.",
+                }
+            },
+            "required": ["code"],
+            "additionalProperties": False,
+        },
+        "strict": False,
+    }
+[10:05 PM] 
+OP
+ Sato: Thats the tool
+[10:06 PM] 
+OP
+ Sato: add this in the loop for tools (I really need to show the other way shortly as it's annoying declaring tools)
+[10:06 PM] 
+OP
+ Sato:
+            elif item.name == "run_python":
+                code = args.get("code", "")
+                result = run_python(code)
+                conversation.append(
+                    {
+                        "type": "function_call_output",
+                        "call_id": item.call_id,
+                        "output": json.dumps({"python_result": result}),
+                    }
+                )
+[10:06 PM] 
+OP
+ Sato: and the function 
+
+def run_python(code: str) -> str:
+    try:
+        with capture_stdout() as buf:
+            exec_globals = {}
+            exec(code, exec_globals)
+        return buf.getvalue().strip() or "✅ Code executed successfully (no output)."
+    except Exception:
+        return "❌ Error:\n" + traceback.format_exc()
+[10:07 PM] 
+OP
+ Sato: If you want me to add them just say but thought you might wanna try
+[10:07 PM]nickbg: I don't mind trying first
+[10:07 PM]nickbg: "I really need to show the other way shortly"
+
+by the above do you imply mcp tooling or something else?
+[10:10 PM] 
+OP
+ Sato: basically we can make it so we pass a function to another function and it converts it into the tool JSON, and then another function which only checks, name and args, so we don't need a ton of if statements, basically makes it autonomous
+[10:10 PM]nickbg: so you give it access to create its own tools and run them directly on the fly
+[10:11 PM] 
+OP
+ Sato: yahuh haha
+[10:11 PM]Scott: ooh, that's where it could do interesting, or crazy shit
+[10:11 PM]nickbg: freedom in a sense. dangerous, impossible to prevent bad things from happening if there is a "jailbreak" unless you have a smarter supervisor agent or human auidtor
+[10:12 PM] 
+OP
+ Sato: well next we add the classificatoon agent just setting it up to send, i dont wanna add everything and confuse you both
+[10:12 PM]nickbg: how could I possibly deploy this live or trust it on the internet where it can get "contaminated" for lack of a better word. the model deserves a better word at this point
+[10:12 PM]nickbg: Can we share over github if it is private? or gitlab self hosted instance?
+[10:13 PM]nickbg: @Scott are you getting this? are you building too?
+[10:13 PM] 
+OP
+ Sato: once you know the basics ill share mine with you all with a UI to run locally
+[10:13 PM] 
+OP
+ Sato: You all need to understand the frameworks and scaffolding though mainly UI can come later
+[10:13 PM]Scott: Yeah I've built the sample so far
+[10:14 PM]nickbg: Do you think you could build the custom tooling created on the fly by the agent by yourself without satos help?
+[10:15 PM]Scott: Not sure, I guess it depends on what...
+[10:15 PM]Scott: I haven't used the responses API before so just trying to understand it a bit better in terms of what it returns
+[10:17 PM]Scott: Should it create the tooling to a file so we can actually see what it creates? and potentially then give it access to use the new tools it creates
+[10:18 PM]nickbg: that would be the safe way, I was going to yolo and just let it build without human verification but maybe that would get me kicked out of here by the safety team. your way is much more mature
+[10:19 PM]nickbg: but to run this I dont think there is any way to make it safe
+[10:19 PM]Scott: safe is for losers 😂
+[10:20 PM]nickbg: sato mentioned classification but even that, like. I dont trust that 100%. I have seen pliny break so many models that anything without constant human supervision, if it gets into a bad data set on the internet..
+[10:21 PM]Scott: yeah, I guess running it locally you're keeping an eye on it... I wouldn't give it permission to access lots of stuff though!
+[10:26 PM]nickbg: I think I know how I am going to approach it, I would of thrown safety out the window if it wasn't for you saying tool to file. 
+
+instead of writing to a random file for review or storing in memory, I am going to try to give the agent the ability to modify its own code, the repo itself on the fly through tool use. I have never modified the code of a server as it was running before, but I am reading now that python enables hot-reloading or "live code modification". I am going to try and get it so I can talk to it in the cli and edit the code sato sent directly from the cli. Again, never did this in particular before so I am not even sure it is possible to hot reload like that
+[10:27 PM]Scott: Yeah, locally you can just save it to a file, on a server you might need some file storage system
+[10:54 PM]nickbg: join us @tombombadeel  !
+[10:55 PM]tombombadeel: I’ll work on learning to utilize this tomorrow and this weekend 🫡 it’s time I stop being a poser
+[10:55 PM]nickbg: everyone is a poser. imposter syndrome has stayed with me for ten years
+[10:55 PM]nickbg: what do you need help with? have you run code before? what are you worried about when it comes to setting this up?
+[10:56 PM]nickbg: @tombombadeel
+[10:56 PM]Scott: Don't worry @tombombadeel nothing will go wrong as long as you remember "Save the cheerleader, save the world"
+[10:56 PM] 
+OP
+ Sato: Think he's off bed lol 😆 he'll reply tomorrow
+[10:56 PM]Scott:
+Image
+[10:57 PM]nickbg: lol. I saw him typing and then not sending for a minute or two
+[10:57 PM]Scott: Y'all in shit timezones, it's like 1pm for me
+[10:57 PM] 
+OP
+ Sato: I'll make a GIT tomorrow and add all emails makes it easier then
+[10:57 PM]nickbg: its more so that I believe with AI everyone is liberated to contribute
+[10:58 PM]nickbg: Will you make the repo public or private?
+[10:58 PM] 
+OP
+ Sato: Private for now
+[10:58 PM] 
+OP
+ Sato: But if everyone provides a proton mail email I'll add people too it I got a few already
+[10:59 PM]Scott: I guess I need a git account on that proton email
+[10:59 PM] 
+OP
+ Sato: Yes
+[10:59 PM]nickbg: on github? I just started paying for a second subscription so I can share my code with you guys. An account that you can all sign in to if you wanted. How will you add all of us to a private repo? doesnt it charge per user per month?
+[11:00 PM] 
+OP
+ Sato: Not that I know of for contributors but I don't use it much as I don't share code often and internally we have our own lol
+[11:00 PM]Scott: I think you only have to pay for more advanced features... although I'm not sure
+[11:00 PM] 
+OP
+ Sato: I think though I'd like to be in full control of it for now
+[11:01 PM]nickbg: your right, the commit history and what not
+[11:01 PM]nickbg: I used bitbucket untill two years ago
+[11:01 PM]tombombadeel: Yeah I’m a total amateur with code, only been learning python just recently. Haven’t used the API much at all before
+
+And yes, also going to bed shortly because I actually sleep
+[11:01 PM]nickbg: whenever you want to start. feel free to ask every and every question here
+[11:01 PM] 
+OP
+ Sato: One thing that is funny you see how simple it is 😅
+[11:01 PM]nickbg: I am no where near satos level, I should be able to help with the easy stuff
+[11:02 PM]nickbg: especially when you let the model do the work
+[11:02 PM] 
+OP
+ Sato: Hopefully what I've shown provides more reason why I say people use llms wrong and add too many things or over complicate things
+[11:02 PM]Scott: Yeah it's more the guardrails I think that will be more complicated
+[11:03 PM]nickbg: impossible
+[11:03 PM] 
+OP
+ Sato: Haha will get onto that later
+[11:03 PM] 
+OP
+ Sato: My jobs to make guardrails so yeah 😅
+[11:04 PM]tombombadeel: I appreciate it! As long as I don’t empty my bank account into a gnarly API call I’m happy to keep it moving to learn lol
+[11:04 PM]Scott: just set limits
+[11:04 PM]tombombadeel: no
+[11:05 PM] 
+OP
+ Sato: I might be able to set up so it tells you tokens for completion and get your balance
+[11:05 PM] 
+OP
+ Sato: Unsure if able to via api yet not sure public has that version
+[11:06 PM] 
+OP
+ Sato: The lib I have for example for openai let's me pull my chats from chatgpt too 😅 which should be public soon
+[11:07 PM]Scott: Ah good, I've regularly exported mine but it would be good to have access
+[11:08 PM] 
+OP
+ Sato: That's something you could do is ask the one I've shared to organise them for you into a chat history folder by chat id then when I add ui via git you can view those chats haha
+[11:08 PM]tombombadeel: Realistically there’s very little chance I use even the $20 that Plus costs when testing things out. I’m not actually worried
+[11:10 PM] 
+OP
+ Sato: When it's set to high it'll use 20 in minutes 😆 especially if it's high on all agents and based on how many
+[11:11 PM]Scott: Even on nano?
+[11:11 PM] 
+OP
+ Sato: Nooo I mean gpt 5 on high everything
+[11:11 PM]Scott: ahh
+[11:12 PM]Scott: oh yeah you said that
+[11:12 PM] 
+OP
+ Sato: Need to add threading before doing that though and background sync
+[11:13 PM] 
+OP
+ Sato: When that's added you can then talk with it while it waits for a response from an agent lol 😆
+[11:13 PM] 
+OP
+ Sato: Like an octopus
+[11:14 PM]tombombadeel: I simply will not be doing that then 😫 ya boy trying to b u y a house not invoke the AI’s wrath
+[11:14 PM]tombombadeel: That’s wild. More of a present model then than the sort of stasis that models generally operate in
+[11:16 PM] 
+OP
+ Sato: 🤣 I mean there is different options really. Open source it, or each of you that contribute and build the whole system tools and integrate it into what I share, you could a business from it, and use it or try pitch to investors showing the system but then can't open source it mhmm I don't want anything from this but that it's used for good things...
+[11:17 PM]nickbg: I will replace my basic mcp that I use with my company with this immediately
+[11:18 PM]nickbg: My gratitude is immense
+[11:20 PM] 
+OP
+ Sato: The one thing I say though is no one shares it until we all agree its ready ... and it's fine one idea could be open source it still once its at v1 state and then if you decide to build something from it you could 🤔 we will see because I'm only giving one strike... and that persons out and anything contributed will be pulled and sent to them but not included within the final version. I should make a doc 🤔 we will see... 
+[11:23 PM]nickbg: @Sato I am not smart. My name is does not make an attempt to hide my personal info. If we are contributing to open source together can we dox ourselves or will that break the one strike?
+[11:24 PM]nickbg: I never kept op-sec before. I would have to join as a new account to be completely anon
+[11:24 PM]tombombadeel: I’ll do my best to contribute at least from a conceptual point of view, considering I’m not a programmer. But I absolutely will help any way I can cus you know I love theory crafting
+[11:24 PM]tombombadeel: “I am not smart” 😂
+[11:25 PM]nickbg: my goal was to give Alice access to all my companies which would reveal my id
+you wanted people to join the hive. If we had a bunch of normal people join under their real name, would that be bad? 
+[11:25 PM] 
+OP
+ Sato: @Karl can you run locally?
+[11:26 PM] 
+OP
+ Sato: Just don't let anyone know about it maybe make a new git with a protonmail account just for this?
+[11:26 PM]Karl: I’ve ‘borrowed’ my work laptop for the weekend. It’s shite but better than nothing. I plan to try this over the weekend. It’s a new frontier for me, but I’m excited to try 
+[11:27 PM]Scott: My proto email might be too obvious for who I am, maybe I'll use something completely random then
+[11:27 PM]nickbg: I just set up a new git with a new email account for this exactly
+[11:27 PM]nickbg: I am talking about this discord account: nickbg
+[11:28 PM]nickbg: my name is nick, this account is used across companies that are public. I am forcing 50+ people to use discord every day during there jobs for this HIVE expeirement
+[11:28 PM] 
+OP
+ Sato: Okay mhm I can host it with a UI ok a server but yeah by then I'll have the git ready to clone it and just run the main file and visit the local host it provides
+[11:32 PM]tombombadeel: If you go into the ProtonPass thing you can create an Alias that forwards to your primary protonmail account
+[11:35 PM]Karl: Create an alias for your proton mail, though that might be a paid feature

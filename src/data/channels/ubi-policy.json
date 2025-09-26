@@ -2,21 +2,40 @@
   "messages": [
     {
       "id": "1",
-      "author": "Policy Wonk",
+      "authorId": "policy-wonk",
       "content": "Let's dive into the policy implementation details. The key question is: how do we structure UBI to replace existing welfare without creating gaps?",
       "timestamp": "Today at 3:15 PM",
-      "avatar": "P",
       "reactions": [
         { "emoji": "📋", "count": 2 },
         { "emoji": "🎯", "count": 1 }
-      ]
+      ],
+      "thread": {
+        "id": "thread-1",
+        "messageCount": 2,
+        "replies": [
+          {
+            "id": "1-1",
+            "authorId": "economist",
+            "content": "Great question! We need to consider the transition period carefully.",
+            "timestamp": "Today at 3:16 PM",
+            "reactions": [
+              { "emoji": "⏰", "count": 1 }
+            ]
+          },
+          {
+            "id": "1-2",
+            "authorId": "anonymous",
+            "content": "What about people who currently rely on specific programs?",
+            "timestamp": "Today at 3:17 PM"
+          }
+        ]
+      }
     },
     {
       "id": "2",
-      "author": "Economist",
+      "authorId": "economist",
       "content": "The Alaska Permanent Fund is a great model. They've been distributing oil revenue as a basic income for decades. It's not universal, but it shows the mechanism works.",
       "timestamp": "Today at 3:18 PM",
-      "avatar": "E",
       "reactions": [
         { "emoji": "🏔️", "count": 3 },
         { "emoji": "💰", "count": 2 }
@@ -24,10 +43,9 @@
     },
     {
       "id": "3",
-      "author": "Anonymous",
+      "authorId": "anonymous",
       "content": "What about the administrative costs? How much would it cost to run a UBI program compared to current welfare systems?",
       "timestamp": "Today at 3:20 PM",
-      "avatar": "A",
       "reactions": [
         { "emoji": "💸", "count": 1 },
         { "emoji": "📊", "count": 2 }
@@ -35,10 +53,9 @@
     },
     {
       "id": "4",
-      "author": "Policy Wonk",
+      "authorId": "policy-wonk",
       "content": "Excellent question! Current welfare has massive administrative overhead - means testing, case workers, appeals processes. UBI would be much simpler: just send money to every adult citizen. The IRS already has everyone's bank account info.",
       "timestamp": "Today at 3:22 PM",
-      "avatar": "P",
       "reactions": [
         { "emoji": "✅", "count": 4 },
         { "emoji": "🏛️", "count": 1 }

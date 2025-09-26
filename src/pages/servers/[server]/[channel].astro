@@ -7,15 +7,28 @@ import servers from '../../../data/servers.json';
 // Define types
 interface MessageData {
   id: string;
-  author: string;
+  authorId: string;
   content: string;
   timestamp: string;
-  avatar: string;
   isEdited?: boolean;
   reactions?: Array<{
     emoji: string;
     count: number;
   }>;
+  thread?: {
+    id: string;
+    messageCount: number;
+    replies: Array<{
+      id: string;
+      authorId: string;
+      content: string;
+      timestamp: string;
+      reactions?: Array<{
+        emoji: string;
+        count: number;
+      }>;
+    }>;
+  };
 }
 
 // Get server and channel from URL params
@@ -81,12 +94,12 @@ if (!currentChannel && currentServer.categories.length > 0) {
   <DiscordLayout server={server} channel={channel}>
     {messages.map((message) => (
       <Message
-        author={message.author}
+        authorId={message.authorId}
         content={message.content}
         timestamp={message.timestamp}
-        avatar={message.avatar}
         isEdited={message.isEdited}
         reactions={message.reactions}
+        thread={message.thread}
       />
     ))}
   </DiscordLayout>

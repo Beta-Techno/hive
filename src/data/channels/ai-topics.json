@@ -2,10 +2,9 @@
   "messages": [
     {
       "id": "1",
-      "author": "AI Researcher",
+      "authorId": "alice",
       "content": "The latest GPT-4o model shows incredible improvements in reasoning. The multimodal capabilities are game-changing for our research.",
       "timestamp": "Today at 11:45 AM",
-      "avatar": "A",
       "reactions": [
         { "emoji": "🧠", "count": 5 },
         { "emoji": "🤖", "count": 3 }
@@ -13,13 +12,42 @@
     },
     {
       "id": "2",
-      "author": "ML Engineer",
+      "authorId": "nickbg",
       "content": "Has anyone tried the new Claude 3.5 Sonnet? The code generation is significantly better than previous versions.",
       "timestamp": "Today at 11:48 AM",
-      "avatar": "M",
       "reactions": [
         { "emoji": "💻", "count": 4 },
         { "emoji": "🔥", "count": 2 }
+      ]
+    },
+    {
+      "id": "3",
+      "authorId": "sato",
+      "content": "The multimodal capabilities are what really excite me. Being able to process images, audio, and text together opens up so many possibilities for research.",
+      "timestamp": "Today at 11:50 AM",
+      "reactions": [
+        { "emoji": "🎯", "count": 6 },
+        { "emoji": "🚀", "count": 4 }
+      ]
+    },
+    {
+      "id": "4",
+      "authorId": "tombombadeel",
+      "content": "I'm curious about the training data. How do they ensure the multimodal understanding is actually coherent and not just pattern matching?",
+      "timestamp": "Today at 11:52 AM",
+      "reactions": [
+        { "emoji": "🤔", "count": 3 },
+        { "emoji": "🔍", "count": 2 }
+      ]
+    },
+    {
+      "id": "5",
+      "authorId": "eternal-void",
+      "content": "That's the million-dollar question. The alignment between modalities is still largely a black box. We need more interpretability research.",
+      "timestamp": "Today at 11:54 AM",
+      "reactions": [
+        { "emoji": "⚫", "count": 4 },
+        { "emoji": "🔬", "count": 3 }
       ]
     }
   ]

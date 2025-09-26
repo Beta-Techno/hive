@@ -2,10 +2,9 @@
   "messages": [
     {
       "id": "1",
-      "author": "Anonymous",
+      "authorId": "anonymous",
       "content": "Hey everyone, I wanted to start a discussion about Universal Basic Income (UBI). What are your thoughts on implementing it in the current economic climate?",
       "timestamp": "Today at 2:30 PM",
-      "avatar": "A",
       "reactions": [
         { "emoji": "👍", "count": 3 },
         { "emoji": "🤔", "count": 1 }
@@ -13,10 +12,9 @@
     },
     {
       "id": "2",
-      "author": "Economist",
+      "authorId": "economist",
       "content": "Great topic! UBI has been studied extensively. The key question is: can we afford it? Most proposals suggest $1000-1500 per month per adult. With 260 million adults in the US, that's $3-4 trillion annually.",
       "timestamp": "Today at 2:32 PM",
-      "avatar": "E",
       "reactions": [
         { "emoji": "📊", "count": 2 },
         { "emoji": "💭", "count": 1 }
@@ -24,10 +22,9 @@
     },
     {
       "id": "3",
-      "author": "Policy Wonk",
+      "authorId": "policy-wonk",
       "content": "But we need to consider the offsetting effects. UBI would replace many existing welfare programs, reducing administrative costs. Plus, the economic stimulus effect could boost GDP by 12-13% according to some models.",
       "timestamp": "Today at 2:35 PM",
-      "avatar": "P",
       "isEdited": true,
       "reactions": [
         { "emoji": "📈", "count": 4 },
@@ -36,10 +33,9 @@
     },
     {
       "id": "4",
-      "author": "Anonymous",
+      "authorId": "anonymous",
       "content": "What about inflation? Wouldn't giving everyone money just drive prices up?",
       "timestamp": "Today at 2:37 PM",
-      "avatar": "A",
       "reactions": [
         { "emoji": "🤔", "count": 2 },
         { "emoji": "💸", "count": 1 }
@@ -47,10 +43,9 @@
     },
     {
       "id": "5",
-      "author": "Economist",
+      "authorId": "economist",
       "content": "That's a common concern, but the evidence suggests otherwise. UBI trials in Finland, Kenya, and Canada showed minimal inflationary effects. The key is that it's redistributive, not new money creation.",
       "timestamp": "Today at 2:40 PM",
-      "avatar": "E",
       "reactions": [
         { "emoji": "📚", "count": 3 },
         { "emoji": "✅", "count": 2 }
@@ -58,10 +53,9 @@
     },
     {
       "id": "6",
-      "author": "Policy Wonk",
+      "authorId": "policy-wonk",
       "content": "Exactly! And think about the automation wave coming. We're already seeing AI replace jobs. UBI could be essential for economic stability in the next decade.",
       "timestamp": "Today at 2:42 PM",
-      "avatar": "P",
       "reactions": [
         { "emoji": "🤖", "count": 5 },
         { "emoji": "⚡", "count": 3 }
@@ -69,10 +63,9 @@
     },
     {
       "id": "7",
-      "author": "Anonymous",
+      "authorId": "anonymous",
       "content": "But what about the work ethic? Won't people just stop working?",
       "timestamp": "Today at 2:45 PM",
-      "avatar": "A",
       "reactions": [
         { "emoji": "💪", "count": 1 },
         { "emoji": "🤷", "count": 1 }
@@ -80,10 +73,9 @@
     },
     {
       "id": "8",
-      "author": "Economist",
+      "authorId": "economist",
       "content": "The data from UBI experiments shows people actually work MORE, not less. They use the financial security to pursue better opportunities, start businesses, or get education. Only about 5% reduce work hours.",
       "timestamp": "Today at 2:47 PM",
-      "avatar": "E",
       "reactions": [
         { "emoji": "📊", "count": 4 },
         { "emoji": "🎓", "count": 2 },
@@ -92,10 +84,9 @@
     },
     {
       "id": "9",
-      "author": "Policy Wonk",
+      "authorId": "policy-wonk",
       "content": "And let's not forget the health benefits. Studies show UBI reduces stress, improves mental health, and even increases life expectancy. The cost savings in healthcare could partially offset the program cost.",
       "timestamp": "Today at 2:50 PM",
-      "avatar": "P",
       "reactions": [
         { "emoji": "❤️", "count": 6 },
         { "emoji": "🏥", "count": 2 },
@@ -104,10 +95,9 @@
     },
     {
       "id": "10",
-      "author": "Anonymous",
+      "authorId": "anonymous",
       "content": "This is really eye-opening. I had no idea there was so much research behind UBI. Where can I learn more about the implementation details?",
       "timestamp": "Today at 2:52 PM",
-      "avatar": "A",
       "reactions": [
         { "emoji": "👀", "count": 2 },
         { "emoji": "📖", "count": 3 }

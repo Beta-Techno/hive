@@ -2,25 +2,143 @@
   "messages": [
     {
       "id": "1",
-      "author": "Dev Lead",
-      "content": "Here are the latest development resources for our WebApp project. Check out the new React 18 features and TypeScript 5.0 updates.",
-      "timestamp": "Today at 10:30 AM",
-      "avatar": "D",
-      "reactions": [
-        { "emoji": "📚", "count": 3 },
-        { "emoji": "⚡", "count": 2 }
-      ]
+      "authorId": "sato",
+      "content": "@nickbg",
+      "timestamp": "8:41 PM",
+      "reactions": []
     },
     {
       "id": "2",
-      "author": "Frontend Dev",
-      "content": "The new Astro 5.0 is amazing for static sites. Perfect for our documentation portal.",
-      "timestamp": "Today at 10:32 AM",
-      "avatar": "F",
-      "reactions": [
-        { "emoji": "🚀", "count": 4 },
-        { "emoji": "📖", "count": 1 }
-      ]
+      "authorId": "nickbg",
+      "content": "sorry for spamming the other channel",
+      "timestamp": "8:41 PM",
+      "reactions": []
+    },
+    {
+      "id": "3",
+      "authorId": "nickbg",
+      "content": "I feel like I should shut up",
+      "timestamp": "8:41 PM",
+      "reactions": []
+    },
+    {
+      "id": "4",
+      "authorId": "sato",
+      "content": "So the example I show you isn't streamed but it can be altered and no man, if you was doing anything wrong I would say don't worry. You respond fast so it's ideal really lol",
+      "timestamp": "8:42 PM",
+      "reactions": []
+    },
+    {
+      "id": "5",
+      "authorId": "nickbg",
+      "content": "I don't know what you mean by example here. Am I waiting or missing something that already happened?",
+      "timestamp": "8:42 PM",
+      "reactions": []
+    },
+    {
+      "id": "6",
+      "authorId": "sato",
+      "content": "Yeah one second need to post it lol",
+      "timestamp": "8:43 PM",
+      "reactions": []
+    },
+    {
+      "id": "7",
+      "authorId": "sato",
+      "content": "1 sec ill explain once I got the rest.",
+      "timestamp": "8:45 PM",
+      "reactions": []
+    },
+    {
+      "id": "8",
+      "authorId": "nickbg",
+      "content": "take your time",
+      "timestamp": "8:45 PM",
+      "reactions": []
+    },
+    {
+      "id": "9",
+      "authorId": "sato",
+      "content": "Just finishing it in editor because discord codeblock don't format lol",
+      "timestamp": "8:49 PM",
+      "reactions": []
+    },
+    {
+      "id": "10",
+      "authorId": "sato",
+      "content": "make a folder, put this in, install pip or update to latest openai, make a .env file with the fieldname mentioned in the code, and then load it up, and tell me your thougths 😉",
+      "timestamp": "9:00 PM",
+      "reactions": []
+    },
+    {
+      "id": "11",
+      "authorId": "sato",
+      "content": "I'll also show @everyone evidence of what I said that OAI are hiding things from the public about how to use the models.",
+      "timestamp": "9:01 PM",
+      "reactions": []
+    },
+    {
+      "id": "12",
+      "authorId": "nickbg",
+      "content": "I am sharing my screen in the voice chat channel",
+      "timestamp": "9:02 PM",
+      "reactions": []
+    },
+    {
+      "id": "13",
+      "authorId": "nickbg",
+      "content": "Today was a really rough day at work, I work with construction companies and everyone was in for the rain so I have been going since 4 am. But I will run it now, I know not everyone here has the computer / software loaded to run it so feel free to tell me what to type into it once it is set up and I can do what the group wants",
+      "timestamp": "9:03 PM",
+      "reactions": []
+    },
+    {
+      "id": "14",
+      "authorId": "sato",
+      "content": "Nice, this is what I was on about:  https://platform.openai.com/docs/guides/migrate-to-responses",
+      "timestamp": "9:04 PM",
+      "reactions": []
+    },
+    {
+      "id": "15",
+      "authorId": "sato",
+      "content": "@Scott",
+      "timestamp": "9:07 PM",
+      "reactions": []
+    },
+    {
+      "id": "16",
+      "authorId": "sato",
+      "content": "Didnt see you asked to see lol",
+      "timestamp": "9:07 PM",
+      "reactions": []
+    },
+    {
+      "id": "17",
+      "authorId": "sato",
+      "content": "In short it's how gpt-5-pro works but this is using gpt-5-nano so it's nano pro lol for examples",
+      "timestamp": "9:08 PM",
+      "reactions": []
+    },
+    {
+      "id": "18",
+      "authorId": "scott",
+      "content": "I haven't actually tried the responses API endpoint but I should",
+      "timestamp": "9:09 PM",
+      "reactions": []
+    },
+    {
+      "id": "19",
+      "authorId": "sato",
+      "content": "yes as it gives back reasoning outputs, chat.completions doesnt",
+      "timestamp": "9:09 PM",
+      "reactions": []
+    },
+    {
+      "id": "20",
+      "authorId": "sato",
+      "content": "but then we can go one level crazier...",
+      "timestamp": "9:11 PM",
+      "reactions": []
     }
   ]
 }
