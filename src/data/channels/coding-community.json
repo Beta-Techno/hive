@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Open Source Dev",
+      "content": "Just released v2.0 of my React component library! Now with TypeScript support and better accessibility. Check it out: github.com/example",
+      "timestamp": "Today at 1:45 PM",
+      "avatar": "O",
+      "reactions": [
+        { "emoji": "🎉", "count": 6 },
+        { "emoji": "⭐", "count": 4 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Full Stack Dev",
+      "content": "Amazing work! The TypeScript integration looks clean. How did you handle the generic types for the component props?",
+      "timestamp": "Today at 1:48 PM",
+      "avatar": "F",
+      "reactions": [
+        { "emoji": "💡", "count": 2 },
+        { "emoji": "🤔", "count": 1 }
+      ]
+    }
+  ]
+}

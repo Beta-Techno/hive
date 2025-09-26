@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Dev Lead",
+      "content": "Here are the latest development resources for our WebApp project. Check out the new React 18 features and TypeScript 5.0 updates.",
+      "timestamp": "Today at 10:30 AM",
+      "avatar": "D",
+      "reactions": [
+        { "emoji": "📚", "count": 3 },
+        { "emoji": "⚡", "count": 2 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Frontend Dev",
+      "content": "The new Astro 5.0 is amazing for static sites. Perfect for our documentation portal.",
+      "timestamp": "Today at 10:32 AM",
+      "avatar": "F",
+      "reactions": [
+        { "emoji": "🚀", "count": 4 },
+        { "emoji": "📖", "count": 1 }
+      ]
+    }
+  ]
+}

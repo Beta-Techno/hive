@@ -1,0 +1,114 @@
+{
+  "servers": [
+    {
+      "id": "hive",
+      "name": "The HiVE",
+      "icon": "H",
+      "categories": [
+        {
+          "id": "webapp",
+          "name": "WebApp",
+          "channels": [
+            {
+              "id": "resources",
+              "name": "resources",
+              "type": "text",
+              "description": "Development resources and tools"
+            },
+            {
+              "id": "meeting-room",
+              "name": "meeting-room", 
+              "type": "text",
+              "description": "Team meetings and planning"
+            },
+            {
+              "id": "court-room",
+              "name": "court-room",
+              "type": "text", 
+              "description": "Code reviews and debates"
+            },
+            {
+              "id": "break-room",
+              "name": "break-room",
+              "type": "text",
+              "description": "Casual chat and breaks"
+            }
+          ]
+        },
+        {
+          "id": "community",
+          "name": "Community",
+          "channels": [
+            {
+              "id": "ai-topics",
+              "name": "ai-topics",
+              "type": "text",
+              "description": "AI and machine learning discussions"
+            },
+            {
+              "id": "coding-community",
+              "name": "coding-community",
+              "type": "text",
+              "description": "General coding discussions"
+            }
+          ]
+        },
+        {
+          "id": "research",
+          "name": "Research",
+          "channels": [
+            {
+              "id": "ubi",
+              "name": "ubi",
+              "type": "text",
+              "description": "Universal Basic Income research"
+            },
+            {
+              "id": "agi",
+              "name": "agi",
+              "type": "text",
+              "description": "Artificial General Intelligence"
+            },
+            {
+              "id": "psychosis",
+              "name": "psychosis",
+              "type": "text",
+              "description": "Mental health and consciousness research"
+            },
+            {
+              "id": "consciousness",
+              "name": "consciousness",
+              "type": "text",
+              "description": "Consciousness studies and philosophy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beta-techno",
+      "name": "Beta Techno",
+      "icon": "B",
+      "categories": [
+        {
+          "id": "general",
+          "name": "General",
+          "channels": [
+            {
+              "id": "welcome",
+              "name": "welcome",
+              "type": "text",
+              "description": "Welcome to Beta Techno"
+            },
+            {
+              "id": "announcements",
+              "name": "announcements",
+              "type": "text",
+              "description": "Server announcements"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

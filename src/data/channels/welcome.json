@@ -1,0 +1,14 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Beta Techno",
+      "content": "Welcome to Beta Techno! This is a placeholder server for future development.",
+      "timestamp": "Today at 12:00 PM",
+      "avatar": "B",
+      "reactions": [
+        { "emoji": "👋", "count": 1 }
+      ]
+    }
+  ]
+}

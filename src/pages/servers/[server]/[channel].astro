@@ -1,0 +1,93 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import DiscordLayout from '../../../components/DiscordLayout.astro';
+import Message from '../../../components/Message.astro';
+import servers from '../../../data/servers.json';
+
+// Define types
+interface MessageData {
+  id: string;
+  author: string;
+  content: string;
+  timestamp: string;
+  avatar: string;
+  isEdited?: boolean;
+  reactions?: Array<{
+    emoji: string;
+    count: number;
+  }>;
+}
+
+// Get server and channel from URL params
+export async function getStaticPaths() {
+  const paths = [];
+  
+  for (const server of servers.servers) {
+    for (const category of server.categories) {
+      for (const channel of category.channels) {
+        paths.push({
+          params: { 
+            server: server.id, 
+            channel: channel.id 
+          }
+        });
+      }
+    }
+  }
+  
+  return paths;
+}
+
+const { server, channel } = Astro.params;
+
+// Load messages for this specific channel
+let messages: MessageData[] = [];
+try {
+  const channelData = await import(`../../../data/channels/${channel}.json`);
+  messages = channelData.default.messages || [];
+} catch (error) {
+  // Fallback to general messages if channel doesn't exist
+  try {
+    const generalData = await import('../../../data/channels/general.json');
+    messages = generalData.default.messages || [];
+  } catch (fallbackError) {
+    messages = [];
+  }
+}
+
+// Find current server and channel info
+const currentServer = servers.servers.find(s => s.id === server) || servers.servers[0];
+let currentChannel = null;
+let currentCategory = null;
+
+// Find the channel across all categories
+for (const category of currentServer.categories) {
+  const foundChannel = category.channels.find(c => c.id === channel);
+  if (foundChannel) {
+    currentChannel = foundChannel;
+    currentCategory = category;
+    break;
+  }
+}
+
+// Fallback to first channel of first category
+if (!currentChannel && currentServer.categories.length > 0) {
+  currentCategory = currentServer.categories[0];
+  currentChannel = currentCategory.channels[0];
+}
+---
+
+<Layout>
+  <DiscordLayout server={server} channel={channel}>
+    {messages.map((message) => (
+      <Message
+        author={message.author}
+        content={message.content}
+        timestamp={message.timestamp}
+        avatar={message.avatar}
+        isEdited={message.isEdited}
+        reactions={message.reactions}
+      />
+    ))}
+  </DiscordLayout>
+</Layout>

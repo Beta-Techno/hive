@@ -1,0 +1,25 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Project Manager",
+      "content": "Sprint planning meeting at 2 PM today. We'll discuss the new authentication system and database migration.",
+      "timestamp": "Today at 9:15 AM",
+      "avatar": "P",
+      "reactions": [
+        { "emoji": "📅", "count": 2 },
+        { "emoji": "👥", "count": 1 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Backend Dev",
+      "content": "I'll have the API documentation ready for review by then. The new endpoints are working great.",
+      "timestamp": "Today at 9:18 AM",
+      "avatar": "B",
+      "reactions": [
+        { "emoji": "✅", "count": 3 }
+      ]
+    }
+  ]
+}

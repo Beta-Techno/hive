@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Consciousness Researcher",
+      "content": "The hard problem of consciousness remains unsolved, but we're making progress. Integrated Information Theory and Global Workspace Theory are converging on similar principles.",
+      "timestamp": "Today at 4:10 PM",
+      "avatar": "C",
+      "reactions": [
+        { "emoji": "🧠", "count": 4 },
+        { "emoji": "🤔", "count": 3 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Philosopher",
+      "content": "The question isn't just 'what is consciousness?' but 'what is it like to be conscious?' The phenomenal aspect is what makes it so difficult to study scientifically.",
+      "timestamp": "Today at 4:15 PM",
+      "avatar": "P",
+      "reactions": [
+        { "emoji": "💭", "count": 5 },
+        { "emoji": "🎭", "count": 2 }
+      ]
+    }
+  ]
+}

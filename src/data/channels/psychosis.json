@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Mental Health Researcher",
+      "content": "The latest research on early intervention for psychosis shows promising results. Cognitive behavioral therapy combined with medication has a 70% success rate in preventing full episodes.",
+      "timestamp": "Today at 5:20 PM",
+      "avatar": "M",
+      "reactions": [
+        { "emoji": "🧠", "count": 4 },
+        { "emoji": "💊", "count": 2 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Clinical Psychologist",
+      "content": "The key is early detection. We need better screening tools and public awareness. Many people don't seek help until symptoms are severe.",
+      "timestamp": "Today at 5:25 PM",
+      "avatar": "C",
+      "reactions": [
+        { "emoji": "🔍", "count": 3 },
+        { "emoji": "📢", "count": 2 }
+      ]
+    }
+  ]
+}

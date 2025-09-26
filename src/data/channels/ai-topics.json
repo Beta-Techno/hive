@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "AI Researcher",
+      "content": "The latest GPT-4o model shows incredible improvements in reasoning. The multimodal capabilities are game-changing for our research.",
+      "timestamp": "Today at 11:45 AM",
+      "avatar": "A",
+      "reactions": [
+        { "emoji": "🧠", "count": 5 },
+        { "emoji": "🤖", "count": 3 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "ML Engineer",
+      "content": "Has anyone tried the new Claude 3.5 Sonnet? The code generation is significantly better than previous versions.",
+      "timestamp": "Today at 11:48 AM",
+      "avatar": "M",
+      "reactions": [
+        { "emoji": "💻", "count": 4 },
+        { "emoji": "🔥", "count": 2 }
+      ]
+    }
+  ]
+}

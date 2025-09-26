@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "AGI Researcher",
+      "content": "The path to AGI is becoming clearer. We need to focus on reasoning, planning, and tool use integration. Current models are showing emergent capabilities we didn't expect.",
+      "timestamp": "Today at 3:20 PM",
+      "avatar": "G",
+      "reactions": [
+        { "emoji": "🎯", "count": 6 },
+        { "emoji": "🔮", "count": 3 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Cognitive Scientist",
+      "content": "The key insight is that intelligence isn't just about pattern matching - it's about causal reasoning and world modeling. We're seeing this emerge in larger models.",
+      "timestamp": "Today at 3:25 PM",
+      "avatar": "C",
+      "reactions": [
+        { "emoji": "🧩", "count": 4 },
+        { "emoji": "💡", "count": 5 }
+      ]
+    }
+  ]
+}

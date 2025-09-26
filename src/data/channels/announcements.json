@@ -1,0 +1,14 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Beta Techno",
+      "content": "Server announcements will appear here. Stay tuned for updates!",
+      "timestamp": "Today at 12:00 PM",
+      "avatar": "B",
+      "reactions": [
+        { "emoji": "📢", "count": 1 }
+      ]
+    }
+  ]
+}

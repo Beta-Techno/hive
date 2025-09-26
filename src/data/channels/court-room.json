@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Code Reviewer",
+      "content": "This PR needs work. The error handling is inconsistent and there are no tests for the new authentication flow.",
+      "timestamp": "Today at 2:15 PM",
+      "avatar": "R",
+      "reactions": [
+        { "emoji": "🔍", "count": 2 },
+        { "emoji": "⚠️", "count": 1 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Senior Dev",
+      "content": "I disagree. The implementation follows our established patterns. The error handling is actually more robust than the current system.",
+      "timestamp": "Today at 2:18 PM",
+      "avatar": "S",
+      "reactions": [
+        { "emoji": "💪", "count": 3 },
+        { "emoji": "✅", "count": 2 }
+      ]
+    }
+  ]
+}

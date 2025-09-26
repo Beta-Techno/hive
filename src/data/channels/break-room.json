@@ -1,0 +1,26 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "author": "Team Lead",
+      "content": "Coffee break! Who's up for a quick game of Among Us? 🎮",
+      "timestamp": "Today at 3:30 PM",
+      "avatar": "T",
+      "reactions": [
+        { "emoji": "☕", "count": 5 },
+        { "emoji": "🎮", "count": 4 }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Junior Dev",
+      "content": "I'm in! Just finished debugging that nasty memory leak. Need to decompress 😅",
+      "timestamp": "Today at 3:32 PM",
+      "avatar": "J",
+      "reactions": [
+        { "emoji": "😅", "count": 3 },
+        { "emoji": "🛠️", "count": 2 }
+      ]
+    }
+  ]
+}

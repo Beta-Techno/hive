@@ -1,18 +1,44 @@
 ---
 // Discord Layout Component
+import servers from '../data/servers.json';
+
 export interface Props {
   channel?: string;
+  server?: string;
 }
 
-const { channel = 'general' } = Astro.props;
+const { channel = 'general', server = 'research' } = Astro.props;
+
+// Find the current server and channel
+const currentServer = servers.servers.find(s => s.id === server) || servers.servers[0];
+let currentChannel = null;
+let currentCategory = null;
+
+// Find the channel across all categories
+for (const category of currentServer.categories) {
+  const foundChannel = category.channels.find(c => c.id === channel);
+  if (foundChannel) {
+    currentChannel = foundChannel;
+    currentCategory = category;
+    break;
+  }
+}
+
+// Fallback to first channel of first category
+if (!currentChannel && currentServer.categories.length > 0) {
+  currentCategory = currentServer.categories[0];
+  currentChannel = currentCategory.channels[0];
+}
 ---
 
 <div class="discord-layout">
   <!-- Server Bar (Far Left) -->
   <div class="server-bar">
-    <div class="server-icon active">
-      <div class="server-icon-inner">UBI</div>
-    </div>
+    {servers.servers.map((serverItem) => (
+      <a href={`/servers/${serverItem.id}/${serverItem.categories[0].channels[0].id}`} class={`server-icon ${serverItem.id === server ? 'active' : ''}`}>
+        <div class="server-icon-inner">{serverItem.icon}</div>
+      </a>
+    ))}
     <div class="server-separator"></div>
     <div class="server-icon">
       <div class="server-icon-inner">+</div>
@@ -22,31 +48,27 @@ const { channel = 'general' } = Astro.props;
   <!-- Channel Sidebar (Left) -->
   <div class="channel-sidebar">
     <div class="server-header">
-      <h2 class="server-name">UBI Discussion</h2>
+      <h2 class="server-name">{currentServer.name}</h2>
       <div class="server-dropdown">▼</div>
     </div>
     
     <div class="channel-list">
-      <div class="channel-category">
-        <div class="category-header">
-          <span class="category-icon">▼</span>
-          <span class="category-name">TEXT CHANNELS</span>
+      {currentServer.categories.map((category) => (
+        <div class="channel-category">
+          <div class="category-header">
+            <span class="category-icon">▼</span>
+            <span class="category-name">{category.name.toUpperCase()}</span>
+          </div>
+          <div class="channels">
+            {category.channels.map((channelItem) => (
+              <a href={`/servers/${server}/${channelItem.id}`} class={`channel ${channelItem.id === channel ? 'active' : ''}`}>
+                <span class="channel-icon">#</span>
+                <span class="channel-name">{channelItem.name}</span>
+              </a>
+            ))}
+          </div>
         </div>
-        <div class="channels">
-          <a href="/channels/general" class={`channel ${channel === 'general' ? 'active' : ''}`}>
-            <span class="channel-icon">#</span>
-            <span class="channel-name">general</span>
-          </a>
-          <a href="/channels/ubi-policy" class={`channel ${channel === 'ubi-policy' ? 'active' : ''}`}>
-            <span class="channel-icon">#</span>
-            <span class="channel-name">ubi-policy</span>
-          </a>
-          <a href="/channels/economics" class={`channel ${channel === 'economics' ? 'active' : ''}`}>
-            <span class="channel-icon">#</span>
-            <span class="channel-name">economics</span>
-          </a>
-        </div>
-      </div>
+      ))}
     </div>
 
     <div class="user-info">
@@ -161,6 +183,8 @@ const { channel = 'general' } = Astro.props;
     cursor: pointer;
     transition: all 0.2s;
     position: relative;
+    text-decoration: none;
+    color: inherit;
   }
 
   .server-icon:hover {
