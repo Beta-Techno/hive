@@ -26,12 +26,26 @@ def parse_discord_export(file_path):
             i += 1
             continue
         
+        # Skip standalone "Image" entries
+        if line == "Image":
+            i += 1
+            continue
+        
         # Check for regular user message format: [8:41 PM]nickbg: message
         user_message_match = re.match(r'^\[([^\]]+)\]([^:]+):\s*(.*)$', line)
         if user_message_match:
             timestamp = user_message_match.group(1)
             username = user_message_match.group(2).strip()
             content = user_message_match.group(3).strip()
+            
+            # Check for multiline content
+            i += 1
+            while i < len(lines) and lines[i].strip() and not re.match(r'^\[', lines[i]) and not re.match(r'^[0-9]', lines[i]):
+                next_line = lines[i].strip()
+                # Skip OP lines and timestamps
+                if next_line != "OP" and not re.match(r'^\[?[0-9]', next_line):
+                    content += " " + next_line
+                i += 1
             
             # Convert username to user ID
             user_id = username.lower().replace(' ', '-')
@@ -43,7 +57,6 @@ def parse_discord_export(file_path):
                 'timestamp': timestamp,
                 'reactions': []
             })
-            i += 1
             continue
         
         # Look for timestamp pattern: [8:41 PM] or 8:41 PM] (missing bracket)
@@ -62,6 +75,15 @@ def parse_discord_export(file_path):
                     if message_match:
                         username = message_match.group(1).strip()
                         content = message_match.group(2).strip()
+                        
+                        # Check for multiline content after OP messages
+                        i += 1
+                        while i < len(lines) and lines[i].strip() and not re.match(r'^\[', lines[i]) and not re.match(r'^[0-9]', lines[i]):
+                            next_line = lines[i].strip()
+                            # Skip OP lines and timestamps
+                            if next_line != "OP" and not re.match(r'^\[?[0-9]', next_line):
+                                content += " " + next_line
+                            i += 1
                         
                         # Convert username to user ID
                         user_id = username.lower().replace(' ', '-')
@@ -83,6 +105,15 @@ def parse_discord_export(file_path):
                         username = message_match.group(1).strip()
                         content = message_match.group(2).strip()
                         
+                        # Check for multiline content
+                        i += 2
+                        while i < len(lines) and lines[i].strip() and not re.match(r'^\[', lines[i]) and not re.match(r'^[0-9]', lines[i]):
+                            next_line = lines[i].strip()
+                            # Skip OP lines and timestamps
+                            if next_line != "OP" and not re.match(r'^\[?[0-9]', next_line):
+                                content += " " + next_line
+                            i += 1
+                        
                         # Convert username to user ID
                         user_id = username.lower().replace(' ', '-')
                         
@@ -93,9 +124,12 @@ def parse_discord_export(file_path):
                             'timestamp': timestamp,
                             'reactions': []
                         })
+                    else:
+                        i += 1
+                else:
                     i += 1
-        
-        i += 1
+        else:
+            i += 1
     
     return messages
 

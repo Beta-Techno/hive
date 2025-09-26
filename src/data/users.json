@@ -121,6 +121,29 @@
       "bio": "Bringing fresh perspectives to the conversation"
     },
     {
+      "id": "crystal-knight",
+      "username": "CrystalKnight💎",
+      "displayName": "CrystalKnight💎",
+      "avatar": "C",
+      "avatarColor": "#faa61a",
+      "avatarImage": "/avatars/CrystalKnight.webp",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-17T05:00:00Z",
+      "bio": "Crystal clear thinking, diamond sharp insights"
+    },
+    {
+      "id": "calling-tool",
+      "username": "calling-tool",
+      "displayName": "System Tool",
+      "avatar": "T",
+      "avatarColor": "#5865f2",
+      "status": "online",
+      "roles": ["bot", "system"],
+      "joinedAt": "2024-01-01T00:00:00Z",
+      "bio": "System tool for AI agent interactions"
+    },
+    {
       "id": "beta-techno",
       "username": "Beta Techno",
       "displayName": "Beta Techno",
