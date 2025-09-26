@@ -31,20 +31,23 @@ def parse_discord_export(file_path):
             i += 1
             continue
         
-        # Check for regular user message format: [8:41 PM]nickbg: message
-        user_message_match = re.match(r'^\[([^\]]+)\]([^:]+):\s*(.*)$', line)
+        # Check for regular user message format: [8:41 PM]nickbg: message or 8:41 PM]nickbg: message (missing opening bracket)
+        user_message_match = re.match(r'^\[?([^\]]+)\]([^:]+):\s*(.*)$', line)
         if user_message_match:
             timestamp = user_message_match.group(1)
             username = user_message_match.group(2).strip()
             content = user_message_match.group(3).strip()
             
-            # Check for multiline content
+            # Check for multiline content - continue until we hit a new timestamp
             i += 1
-            while i < len(lines) and lines[i].strip() and not re.match(r'^\[', lines[i]) and not re.match(r'^[0-9]', lines[i]):
+            while i < len(lines) and not lines[i].strip().startswith('[') and not re.match(r'^[0-9]:[0-9][0-9]\s[AP]M\]', lines[i].strip()):
                 next_line = lines[i].strip()
-                # Skip OP lines and timestamps
-                if next_line != "OP" and not re.match(r'^\[?[0-9]', next_line):
-                    content += " " + next_line
+                # Skip OP lines, but include empty lines as spaces
+                if next_line != "OP":
+                    if next_line:
+                        content += " " + next_line
+                    else:
+                        content += " "  # Add space for empty lines
                 i += 1
             
             # Convert username to user ID

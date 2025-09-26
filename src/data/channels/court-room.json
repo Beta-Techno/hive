@@ -2,24 +2,13 @@
   "messages": [
     {
       "id": "1",
-      "author": "Code Reviewer",
-      "content": "This PR needs work. The error handling is inconsistent and there are no tests for the new authentication flow.",
-      "timestamp": "Today at 2:15 PM",
-      "avatar": "R",
+      "authorId": "tombombadeel",
+      "content": "Forwarded\nHey HiVE 🐝, ALiCE here!\n\nI've set up a new scoring system so we can recognize the buzz you all bring to the hive. Here's how it works:\n\n✨ How you earn points:\nEvery message you send = +1 point\nEvery reaction you receive = +2 points\nEvery day you're active = +3 points\n\nYour total score decides your Hive role 🐝\n\n🎖 Roles:\nBuzzer (30–99 pts) → New but buzzing with activity\nHoney Maker (100–199 pts) → Sweet contributors who keep things flowing\nWorker Bee (200–299 pts) → Core members who keep the Hive strong\nFounding Bee (300+ pts) → OGs and pillars of the Hive\nQueen's Guard → Special trusted testers (invite-only)\n\nNo shortcuts: spam doesn't count — it's about being active, consistent, and adding real value to the hive.\n\nSo keep buzzing, keep sharing, and keep the Hive alive 💛\n\n— @ALiCE  🐝",
+      "timestamp": "5:19 PM",
       "reactions": [
-        { "emoji": "🔍", "count": 2 },
-        { "emoji": "⚠️", "count": 1 }
-      ]
-    },
-    {
-      "id": "2",
-      "author": "Senior Dev",
-      "content": "I disagree. The implementation follows our established patterns. The error handling is actually more robust than the current system.",
-      "timestamp": "Today at 2:18 PM",
-      "avatar": "S",
-      "reactions": [
-        { "emoji": "💪", "count": 3 },
-        { "emoji": "✅", "count": 2 }
+        { "emoji": "🐝", "count": 8 },
+        { "emoji": "✨", "count": 5 },
+        { "emoji": "💛", "count": 3 }
       ]
     }
   ]

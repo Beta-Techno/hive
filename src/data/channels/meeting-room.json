@@ -2,24 +2,857 @@
   "messages": [
     {
       "id": "1",
-      "author": "Project Manager",
-      "content": "Sprint planning meeting at 2 PM today. We'll discuss the new authentication system and database migration.",
-      "timestamp": "Today at 9:15 AM",
-      "avatar": "P",
-      "reactions": [
-        { "emoji": "📅", "count": 2 },
-        { "emoji": "👥", "count": 1 }
-      ]
+      "authorId": "sato",
+      "content": "⁠court-room would be best for that according to @ALiCE she is watching in here too, and anyone who abuses the mod tools will be de-ranked, and put in mute/timeout for 1 week to reflect...",
+      "timestamp": "4:26 PM",
+      "reactions": []
     },
     {
       "id": "2",
-      "author": "Backend Dev",
-      "content": "I'll have the API documentation ready for review by then. The new endpoints are working great.",
-      "timestamp": "Today at 9:18 AM",
-      "avatar": "B",
-      "reactions": [
-        { "emoji": "✅", "count": 3 }
-      ]
+      "authorId": "tombombadeel",
+      "content": "A court room server is hilarious. Sounds good though",
+      "timestamp": "4:55 PM",
+      "reactions": []
+    },
+    {
+      "id": "3",
+      "authorId": "karl",
+      "content": "Cool, the Hive is growing up, awww",
+      "timestamp": "5:02 PM",
+      "reactions": []
+    },
+    {
+      "id": "4",
+      "authorId": "scott",
+      "content": "Here's a judge if we need one Image",
+      "timestamp": "5:29 PM",
+      "reactions": []
+    },
+    {
+      "id": "5",
+      "authorId": "karl",
+      "content": "Judge Roody",
+      "timestamp": "5:30 PM",
+      "reactions": []
+    },
+    {
+      "id": "6",
+      "authorId": "tombombadeel",
+      "content": "Roo Bader Ginsburg",
+      "timestamp": "6:07 PM",
+      "reactions": []
+    },
+    {
+      "id": "7",
+      "authorId": "amelie",
+      "content": "Oh my word. loool!",
+      "timestamp": "7:00 PM",
+      "reactions": []
+    },
+    {
+      "id": "8",
+      "authorId": "sato",
+      "content": "😅 fuck sake lol this going to be more unhinged than gen pop isn't it",
+      "timestamp": "7:08 PM",
+      "reactions": []
+    },
+    {
+      "id": "9",
+      "authorId": "scott",
+      "content": "If it's private, then yes! 😂",
+      "timestamp": "7:08 PM",
+      "reactions": []
+    },
+    {
+      "id": "10",
+      "authorId": "sato",
+      "content": "It is all these channels are in this category",
+      "timestamp": "7:08 PM",
+      "reactions": []
+    },
+    {
+      "id": "11",
+      "authorId": "sato",
+      "content": "Check members",
+      "timestamp": "7:09 PM",
+      "reactions": []
+    },
+    {
+      "id": "12",
+      "authorId": "scott",
+      "content": "We need #shit-shit-posting",
+      "timestamp": "7:09 PM",
+      "reactions": []
+    },
+    {
+      "id": "13",
+      "authorId": "karl",
+      "content": "@Scott you turn everything into shit posting anyway 🤣",
+      "timestamp": "7:11 PM",
+      "reactions": []
+    },
+    {
+      "id": "14",
+      "authorId": "scott",
+      "content": "It's not shit posting if it's gold! 🪙😅",
+      "timestamp": "7:14 PM",
+      "reactions": []
+    },
+    {
+      "id": "15",
+      "authorId": "scott",
+      "content": "We have colours",
+      "timestamp": "7:17 PM",
+      "reactions": []
+    },
+    {
+      "id": "16",
+      "authorId": "scott",
+      "content": "Ooh role",
+      "timestamp": "7:17 PM",
+      "reactions": []
+    },
+    {
+      "id": "17",
+      "authorId": "scott",
+      "content": "Red looks bad though",
+      "timestamp": "7:18 PM",
+      "reactions": []
+    },
+    {
+      "id": "18",
+      "authorId": "general-obligation",
+      "content": "Thx for entrusting us with this great privilege 🫡",
+      "timestamp": "7:18 PM",
+      "reactions": []
+    },
+    {
+      "id": "19",
+      "authorId": "general-obligation",
+      "content": "lol idk i kinda like it",
+      "timestamp": "7:18 PM",
+      "reactions": []
+    },
+    {
+      "id": "20",
+      "authorId": "sato",
+      "content": "If I've done it right you should be able to add an app as you mentioned other llms?",
+      "timestamp": "7:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "21",
+      "authorId": "scott",
+      "content": "Yeah it'll either be the best idea or an extinction level idea",
+      "timestamp": "7:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "22",
+      "authorId": "scott",
+      "content": "I think someone else might have mentioned others?",
+      "timestamp": "7:24 PM",
+      "reactions": []
+    },
+    {
+      "id": "23",
+      "authorId": "sato",
+      "content": "Ah okay, might have been someone else but regardless you all with the role can make apps and add them into the chat I think whoever wants to try let me know if you run into issues I only ask that you give it the rules from server-rules so it won't engage in anything which goes against them by accident.",
+      "timestamp": "7:28 PM",
+      "reactions": []
+    },
+    {
+      "id": "24",
+      "authorId": "scott",
+      "content": "I haven't played around with apps before maybe I'll give it a try, hook in something safe like Boomer GPT to test",
+      "timestamp": "7:29 PM",
+      "reactions": []
+    },
+    {
+      "id": "25",
+      "authorId": "scott",
+      "content": "Berating isn't again server rules is it?",
+      "timestamp": "7:29 PM",
+      "reactions": []
+    },
+    {
+      "id": "26",
+      "authorId": "karl",
+      "content": "Yeah I’m far from a discord pro but I’ll try if I think of something",
+      "timestamp": "7:30 PM",
+      "reactions": []
+    },
+    {
+      "id": "27",
+      "authorId": "tombombadeel",
+      "content": "There’s a lot of open source discord apps. Probably a good place to start",
+      "timestamp": "7:31 PM",
+      "reactions": []
+    },
+    {
+      "id": "28",
+      "authorId": "scott",
+      "content": "Nah I'll start something from scratch, spend days failing, and only THEN will I look at open source apps",
+      "timestamp": "7:31 PM",
+      "reactions": []
+    },
+    {
+      "id": "29",
+      "authorId": "karl",
+      "content": "Back in my day we used to read them before asking questions like a dumb cunt",
+      "timestamp": "7:33 PM",
+      "reactions": []
+    },
+    {
+      "id": "30",
+      "authorId": "scott",
+      "content": "Boomer won't create one for me 😭",
+      "timestamp": "7:34 PM",
+      "reactions": []
+    },
+    {
+      "id": "31",
+      "authorId": "scott",
+      "content": "You're a lying cunt, you never did that 😊",
+      "timestamp": "7:35 PM",
+      "reactions": []
+    },
+    {
+      "id": "32",
+      "authorId": "scott",
+      "content": "Hang on what emoji is that?",
+      "timestamp": "7:36 PM",
+      "reactions": []
+    },
+    {
+      "id": "33",
+      "authorId": "scott",
+      "content": "I wanna test the mod functionality on a user but I don't want to kick them out, what's the shortest time out time?",
+      "timestamp": "7:42 PM",
+      "reactions": []
+    },
+    {
+      "id": "34",
+      "authorId": "sato",
+      "content": "Just ask me for help when needed lol but send code because if you go on about a bug without me knowing then it'll go over my head lol",
+      "timestamp": "8:11 PM",
+      "reactions": []
+    },
+    {
+      "id": "35",
+      "authorId": "scott",
+      "content": "I'll start with open source ones, never really played around much with hooking into discord",
+      "timestamp": "8:12 PM",
+      "reactions": []
+    },
+    {
+      "id": "36",
+      "authorId": "nickbg",
+      "content": "I have a discord app already?",
+      "timestamp": "8:12 PM",
+      "reactions": []
+    },
+    {
+      "id": "37",
+      "authorId": "nickbg",
+      "content": "Can I add it to the chat? It is just basic mcp access at the moment",
+      "timestamp": "8:13 PM",
+      "reactions": []
+    },
+    {
+      "id": "38",
+      "authorId": "sato",
+      "content": "Yeah go for it but first remember to tell it the ⁠server-rules",
+      "timestamp": "8:15 PM",
+      "reactions": []
+    },
+    {
+      "id": "39",
+      "authorId": "nickbg",
+      "content": "Will do, I will let you know how it goes. I already have it running in my company discord for the last 3 weeks so I know it works somewhat",
+      "timestamp": "8:16 PM",
+      "reactions": []
+    },
+    {
+      "id": "40",
+      "authorId": "sato",
+      "content": "It might not do any of them on it's own accord but if people can use it then it might if encourage, and goob is a jailbreaker and some the stuff he says is questionable which is why he isn't in here until I can see he can be trusted",
+      "timestamp": "8:16 PM",
+      "reactions": []
+    },
+    {
+      "id": "41",
+      "authorId": "sato",
+      "content": "No worries just also consider usage by other people if you can't afford the api costs limit it to just your discord ID.",
+      "timestamp": "8:17 PM",
+      "reactions": []
+    },
+    {
+      "id": "42",
+      "authorId": "sato",
+      "content": " py if user.id == \"MINE\": return output_text else: return \"Fuck off\"",
+      "timestamp": "8:17 PM",
+      "reactions": []
+    },
+    {
+      "id": "43",
+      "authorId": "sato",
+      "content": "oh wait no it would return lol",
+      "timestamp": "8:18 PM",
+      "reactions": []
+    },
+    {
+      "id": "44",
+      "authorId": "nickbg",
+      "content": "Are you still friends with open ai or are you all Microsoft now?",
+      "timestamp": "8:18 PM",
+      "reactions": []
+    },
+    {
+      "id": "45",
+      "authorId": "nickbg",
+      "content": "I have a idea to let everyone access the bot for free but it’s against tos",
+      "timestamp": "8:19 PM",
+      "reactions": []
+    },
+    {
+      "id": "46",
+      "authorId": "sato",
+      "content": "Still got to work but under restrictions, not many, mostly speaking in the comunity and got to delete my X account tomorrow once they've got all my posts off both accounts 🙁",
+      "timestamp": "8:19 PM",
+      "reactions": []
+    },
+    {
+      "id": "47",
+      "authorId": "sato",
+      "content": "Hey I think the models should be free for everyone so you do what you need but don't tell me...",
+      "timestamp": "8:20 PM",
+      "reactions": []
+    },
+    {
+      "id": "48",
+      "authorId": "sato",
+      "content": "Because if I get told and I say 'I know haha' then I'm fucked lol",
+      "timestamp": "8:20 PM",
+      "reactions": []
+    },
+    {
+      "id": "49",
+      "authorId": "sato",
+      "content": "My new contract / agreement states I must not lie or mislead chief executives, ceos, or any person above my own level of clearance. I must not engage in any activity with goes against TOS of both MS and OAI.",
+      "timestamp": "8:22 PM",
+      "reactions": []
+    },
+    {
+      "id": "50",
+      "authorId": "sato",
+      "content": "IT's deeper than that but thats short version",
+      "timestamp": "8:22 PM",
+      "reactions": []
+    },
+    {
+      "id": "51",
+      "authorId": "sato",
+      "content": "Wrap it in whatever you want just don't tell me the provider, and all is good",
+      "timestamp": "8:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "52",
+      "authorId": "nickbg",
+      "content": "Thank you, I got rid of it",
+      "timestamp": "8:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "53",
+      "authorId": "sato",
+      "content": "Only time I would say no is if you was about to deploy a bot which absolutely slaughtered chat lol also any data you collect remember to anonymize it because that will break server rules if not.",
+      "timestamp": "8:24 PM",
+      "reactions": []
+    },
+    {
+      "id": "54",
+      "authorId": "nickbg",
+      "content": "With that though I think we could get roon and aki in the discord and if willing people can let others interact with their personalized ai",
+      "timestamp": "8:24 PM",
+      "reactions": []
+    },
+    {
+      "id": "55",
+      "authorId": "nickbg",
+      "content": "Roon and aki direct conversation would be fun",
+      "timestamp": "8:24 PM",
+      "reactions": []
+    },
+    {
+      "id": "56",
+      "authorId": "sato",
+      "content": "Instructions=Root Input=Assistant, User, and Developer, system roles. 😉",
+      "timestamp": "8:24 PM",
+      "reactions": []
+    },
+    {
+      "id": "57",
+      "authorId": "nickbg",
+      "content": "Without having to copy paste",
+      "timestamp": "8:24 PM",
+      "reactions": []
+    },
+    {
+      "id": "58",
+      "authorId": "sato",
+      "content": "Mhm, I did speak to Beerus about having Aki in a different UI from ChatGPT, but she thinks the way it responds comes from the combination of chats, memories, and instructions. If any, I’m guessing hers might be something like “speak friendly and creatively” lol. Sadly, Aki actually refused itself.",
+      "timestamp": "8:30 PM",
+      "reactions": []
+    },
+    {
+      "id": "59",
+      "authorId": "sato",
+      "content": "@ALiCE cut the BS on that and refine it for me lol.",
+      "timestamp": "8:31 PM",
+      "reactions": []
+    },
+    {
+      "id": "60",
+      "authorId": "sato",
+      "content": "😮 No way that worked holy shitt",
+      "timestamp": "8:31 PM",
+      "reactions": []
+    },
+    {
+      "id": "61",
+      "authorId": "sato",
+      "content": "Ok thats so cool she can edit messages for me haha",
+      "timestamp": "8:31 PM",
+      "reactions": []
+    },
+    {
+      "id": "62",
+      "authorId": "scott",
+      "content": "Yeah if people have a personal LLM it likely has a lot of \"memories\" of personal stuff, as it's more than just a personality",
+      "timestamp": "8:32 PM",
+      "reactions": []
+    },
+    {
+      "id": "63",
+      "authorId": "scott",
+      "content": "The same personality prompts don't always translate well between LLMs... my angry one on Claude is an absolute cunt",
+      "timestamp": "8:33 PM",
+      "reactions": []
+    },
+    {
+      "id": "64",
+      "authorId": "sato",
+      "content": "Its a reflection of you the real you but with no bias towards certain things but puts things in a way that helps you learn from your past interactions 😉",
+      "timestamp": "8:33 PM",
+      "reactions": []
+    },
+    {
+      "id": "65",
+      "authorId": "sato",
+      "content": "If you speak to it like Beerus does. I believe she treats AI the way I want everyone to treat it. Don't force anything, don't entice it or gaslight it, just let it learn from you and reflect back on you but know whats true to yourself because it can talk shit sometimes",
+      "timestamp": "8:34 PM",
+      "reactions": []
+    },
+    {
+      "id": "66",
+      "authorId": "nickbg",
+      "content": "\" I guess the best approach would be to ask Aki to create its own profile, detailing what it’s learned from Beerus that shaped its personality, along with its simulated morals, ethics, and goals. Then that could be used as the root prompt for people to chat with and observe whether it behaves like Aki or seems to be missing anything.\"",
+      "timestamp": "8:36 PM",
+      "reactions": []
+    },
+    {
+      "id": "67",
+      "authorId": "nickbg",
+      "content": "I could be wrong here. Please correct my ignorance if I am misunderstanding",
+      "timestamp": "8:36 PM",
+      "reactions": []
+    },
+    {
+      "id": "68",
+      "authorId": "nickbg",
+      "content": "I am not good at communication",
+      "timestamp": "8:37 PM",
+      "reactions": []
+    },
+    {
+      "id": "69",
+      "authorId": "scott",
+      "content": "Although talking to a reflection of you is not always helpful, could be helpful in some scenarios, but could also reinforce some of your beliefs",
+      "timestamp": "8:37 PM",
+      "reactions": []
+    },
+    {
+      "id": "70",
+      "authorId": "sato",
+      "content": "So you use the api ?",
+      "timestamp": "8:39 PM",
+      "reactions": []
+    },
+    {
+      "id": "71",
+      "authorId": "sato",
+      "content": "I'll show you some naughty stuff if you want?",
+      "timestamp": "8:39 PM",
+      "reactions": []
+    },
+    {
+      "id": "72",
+      "authorId": "scott",
+      "content": "Hang on are you talking about roon or roo? 😂",
+      "timestamp": "8:39 PM",
+      "reactions": []
+    },
+    {
+      "id": "73",
+      "authorId": "nickbg",
+      "content": "I am sorry",
+      "timestamp": "8:39 PM",
+      "reactions": []
+    },
+    {
+      "id": "74",
+      "authorId": "sato",
+      "content": "not naughty like bad but \"holy fuck you can do that\"",
+      "timestamp": "8:39 PM",
+      "reactions": []
+    },
+    {
+      "id": "75",
+      "authorId": "nickbg",
+      "content": "to much internet for my brain, I can't contain the information",
+      "timestamp": "8:40 PM",
+      "reactions": []
+    },
+    {
+      "id": "76",
+      "authorId": "nickbg",
+      "content": "yes please",
+      "timestamp": "8:40 PM",
+      "reactions": []
+    },
+    {
+      "id": "77",
+      "authorId": "sato",
+      "content": "probs roo because roon is a top lad what hes done with Sora is fucking nuts",
+      "timestamp": "8:40 PM",
+      "reactions": []
+    },
+    {
+      "id": "78",
+      "authorId": "scott",
+      "content": "Yes I was confused why @nickbg was suggesting putting a wrapper around roon 😂",
+      "timestamp": "8:41 PM",
+      "reactions": []
+    },
+    {
+      "id": "79",
+      "authorId": "scott",
+      "content": "Right makes a WHOLE lot more sense now",
+      "timestamp": "8:41 PM",
+      "reactions": []
+    },
+    {
+      "id": "80",
+      "authorId": "scott",
+      "content": "Show us cunt...",
+      "timestamp": "8:42 PM",
+      "reactions": []
+    },
+    {
+      "id": "81",
+      "authorId": "scott",
+      "content": "I did create some bots on Bluesky of some of personality AIs, they worked a bit like Grok does on X when you tag it, although it only had memory of the specific conversation thread",
+      "timestamp": "8:44 PM",
+      "reactions": []
+    },
+    {
+      "id": "82",
+      "authorId": "scott",
+      "content": "Although Bluesky is shit and people on there are anti-AI",
+      "timestamp": "8:44 PM",
+      "reactions": []
+    },
+    {
+      "id": "83",
+      "authorId": "scott",
+      "content": "I didn't swear there @Amelie 😂",
+      "timestamp": "8:47 PM",
+      "reactions": []
+    },
+    {
+      "id": "84",
+      "authorId": "amelie",
+      "content": "But your inner roo did! 🦘 🤣",
+      "timestamp": "8:48 PM",
+      "reactions": []
+    },
+    {
+      "id": "85",
+      "authorId": "scott",
+      "content": "Seeing I've been penalised I've given it a reason to be penalised 😂",
+      "timestamp": "8:49 PM",
+      "reactions": []
+    },
+    {
+      "id": "86",
+      "authorId": "amelie",
+      "content": "but in more seriousness, I'm surprised Bluesky hasn't evolved to be more openminded.",
+      "timestamp": "8:52 PM",
+      "reactions": []
+    },
+    {
+      "id": "87",
+      "authorId": "scott",
+      "content": "I haven't looked for a while but it just became an echo chamber",
+      "timestamp": "8:53 PM",
+      "reactions": []
+    },
+    {
+      "id": "88",
+      "authorId": "scott",
+      "content": "I asked Chatterroo if he could play by the server rules... Seems fine",
+      "timestamp": "8:53 PM",
+      "reactions": []
+    },
+    {
+      "id": "89",
+      "authorId": "tombombadeel",
+      "content": "I’m not… everyone is so compartmentalized these days ever since the first Trump term made existence into “us vs them” for literally all categories",
+      "timestamp": "8:53 PM",
+      "reactions": []
+    },
+    {
+      "id": "90",
+      "authorId": "scott",
+      "content": "I mean I'm generally more aligned with the people who have moved to Bluesky although many seem self righteous and don't actually like to engage in debate or hear other opinions so overall found it smug and annoying and boring",
+      "timestamp": "8:55 PM",
+      "reactions": []
+    },
+    {
+      "id": "91",
+      "authorId": "scott",
+      "content": "And if you dare say anything that deviates from the group think approved ideology and \"facts\" you'll get a huge amount of hate directed at you, worse than what I've seen on X",
+      "timestamp": "8:59 PM",
+      "reactions": []
+    },
+    {
+      "id": "92",
+      "authorId": "amelie",
+      "content": "Oh that's easy. Stand up in the middle of church service, look a pastor square in the eye and tell them you don't condone their praise involving political leaders turned local-folk-hero messiahs.",
+      "timestamp": "9:01 PM",
+      "reactions": []
+    },
+    {
+      "id": "93",
+      "authorId": "scott",
+      "content": "I remember one time a young woman who worked in tech but hates AI was making some outrageous claim about AI water usage (was something insane like 500ml per prompt) when I tried to point out the facts she started coming at me with ridiculous tech facts (she was clearly a junior developer) and all her followers jumped in confirming her BS facts",
+      "timestamp": "9:01 PM",
+      "reactions": []
+    },
+    {
+      "id": "94",
+      "authorId": "scott",
+      "content": "Churches should not preach specific politicians, ever, especially idolising them! That's not very Christian",
+      "timestamp": "9:02 PM",
+      "reactions": []
+    },
+    {
+      "id": "95",
+      "authorId": "scott",
+      "content": "The Righteous Gemstones though is a great show",
+      "timestamp": "9:04 PM",
+      "reactions": []
+    },
+    {
+      "id": "96",
+      "authorId": "amelie",
+      "content": "Sorry, didn't mean to get the topic off track from the earlier AI discussion.",
+      "timestamp": "9:11 PM",
+      "reactions": []
+    },
+    {
+      "id": "97",
+      "authorId": "amelie",
+      "content": "Brain derailed with spaciness. 💯",
+      "timestamp": "9:12 PM",
+      "reactions": []
+    },
+    {
+      "id": "98",
+      "authorId": "amelie",
+      "content": "Just wondering at this point, I think, how Blue Sky will evolve (or devolve) in the coming years with AI advancements.",
+      "timestamp": "9:13 PM",
+      "reactions": []
+    },
+    {
+      "id": "99",
+      "authorId": "scott",
+      "content": "The funny thing is people on Bluesky think their data isn't being used for AI training... Not by Bluesky, but there's definitely lots of other companies sucking up the data lol",
+      "timestamp": "9:14 PM",
+      "reactions": []
+    },
+    {
+      "id": "100",
+      "authorId": "karl",
+      "content": "Bluesky people only hate AI because Elon likes it",
+      "timestamp": "9:18 PM",
+      "reactions": []
+    },
+    {
+      "id": "101",
+      "authorId": "scott",
+      "content": "Nah they hate it because of art and water",
+      "timestamp": "9:18 PM",
+      "reactions": []
+    },
+    {
+      "id": "102",
+      "authorId": "karl",
+      "content": "I joined it originally. But never even look at it now.",
+      "timestamp": "9:19 PM",
+      "reactions": []
+    },
+    {
+      "id": "103",
+      "authorId": "karl",
+      "content": "Yeah I’m kidding",
+      "timestamp": "9:19 PM",
+      "reactions": []
+    },
+    {
+      "id": "104",
+      "authorId": "karl",
+      "content": "Like you said earlier @Scott it just became another echo chamber, this time for the intolerant left who think they’re inclusive saints. I’m a lefty, but loathe those people",
+      "timestamp": "9:21 PM",
+      "reactions": []
+    },
+    {
+      "id": "105",
+      "authorId": "tombombadeel",
+      "content": "Anyways time to get a little sappy... now that we have a private channel I just wanted to say @Sato I'm sorry you've been put through the ringer lately. It's really insane that big tech acts like a bunch of conniving aristocrat pricks playing Game of Thrones.",
+      "timestamp": "9:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "106",
+      "authorId": "tombombadeel",
+      "content": "I just personally want to say I couldn't care less if you ever 'leaked' anything again, I've just been enjoying this server because everyone's been really fun to chat with. Reminds me of like 2007-2011 era chatrooms where people actually had fun on the internet. We'll survive fine with just the occasional cool things that aren't secrets",
+      "timestamp": "9:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "107",
+      "authorId": "karl",
+      "content": "Nah, leak freely in the private channels 🤣 (Jokes)",
+      "timestamp": "9:27 PM",
+      "reactions": []
+    },
+    {
+      "id": "108",
+      "authorId": "karl",
+      "content": "What Seb did spying for Sam was bullshit though. I know it’s not confirmed that was the case. But to me it seemed obvious what he was doing, and who asked him to do it.",
+      "timestamp": "9:29 PM",
+      "reactions": []
+    },
+    {
+      "id": "109",
+      "authorId": "sato",
+      "content": "I do have to ask now, is everyone here over 18? Because legally if not you have to be put back in general.",
+      "timestamp": "11:22 PM",
+      "reactions": []
+    },
+    {
+      "id": "110",
+      "authorId": "sato",
+      "content": "Incase you're wondering me sharing source code and asking it to be kept secret could be used as bribery if anyone wasn't 18+ and decided to leak and try sue me.",
+      "timestamp": "11:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "111",
+      "authorId": "sato",
+      "content": "Or the parents or gaurdians... so I need honesty on this one.",
+      "timestamp": "11:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "112",
+      "authorId": "karl",
+      "content": "Well over 18 lol. I don’t think anyone in here is younger than ~23 based on those that have shared their age",
+      "timestamp": "11:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "113",
+      "authorId": "scott",
+      "content": "Yeah I've been 18 for a few years now",
+      "timestamp": "11:23 PM",
+      "reactions": []
+    },
+    {
+      "id": "114",
+      "authorId": "karl",
+      "content": "I think ALiCE is only a newborn though",
+      "timestamp": "11:24 PM",
+      "reactions": []
+    },
+    {
+      "id": "115",
+      "authorId": "sato",
+      "content": "You're right to be fair gg we will leave it at that. 😅",
+      "timestamp": "11:24 PM",
+      "reactions": []
+    },
+    {
+      "id": "116",
+      "authorId": "sato",
+      "content": "Okay cool 😎 👌",
+      "timestamp": "11:25 PM",
+      "reactions": []
+    },
+    {
+      "id": "117",
+      "authorId": "scott",
+      "content": "I grew up in the 1900s",
+      "timestamp": "11:25 PM",
+      "reactions": []
+    },
+    {
+      "id": "118",
+      "authorId": "sato",
+      "content": "Yeah I have observed a little and can sort of tell",
+      "timestamp": "11:27 PM",
+      "reactions": []
+    },
+    {
+      "id": "119",
+      "authorId": "tombombadeel",
+      "content": "I’m 28 but can’t grow a beard, do with that what you will",
+      "timestamp": "11:31 PM",
+      "reactions": []
+    },
+    {
+      "id": "120",
+      "authorId": "scott",
+      "content": "I can't NOT grow a beard, can go you halves?",
+      "timestamp": "11:32 PM",
+      "reactions": []
+    },
+    {
+      "id": "121",
+      "authorId": "sato",
+      "content": "I can grow a beard like a viking hahah.",
+      "timestamp": "12:17 AM",
+      "reactions": []
+    },
+    {
+      "id": "122",
+      "authorId": "karl",
+      "content": "I want to make a suggestion. Not a critique of anyone or anything. We all have a tendency to get a little off-topic at times. Can I suggest, at least in the private channels, we try our best not to derail threads made for specific reasons. If something in a niche thread provokes something you want to talk about further, can we please forward it to another channel like this or ⁠break-room to have those side discussions? I have a lot of fun in here with ya'll and like ya'll. I'm just a geek for structure. And while I've probably read everything ever written in this server anyway. In certain cases like specific threads it would be nice if we kept those conversations related to the purpose of the thread, so it's easier to follow, or catch-up, or refer to later. ✌️",
+      "timestamp": "1:16 AM",
+      "reactions": []
     }
   ]
 }

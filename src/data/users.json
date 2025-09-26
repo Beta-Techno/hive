@@ -126,11 +126,65 @@
       "displayName": "CrystalKnight💎",
       "avatar": "C",
       "avatarColor": "#faa61a",
-      "avatarImage": "/avatars/CrystalKnight.webp",
       "status": "online",
       "roles": ["member"],
       "joinedAt": "2024-01-17T05:00:00Z",
       "bio": "Crystal clear thinking, diamond sharp insights"
+    },
+    {
+      "id": "asher",
+      "username": "asher",
+      "displayName": "asher",
+      "avatar": "A",
+      "avatarColor": "#43b581",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-19T14:00:00Z",
+      "bio": "Exploring the intersection of AI and human emotion"
+    },
+    {
+      "id": "jlew",
+      "username": "jlew",
+      "displayName": "jlew",
+      "avatar": "J",
+      "avatarColor": "#faa61a",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-19T14:00:00Z",
+      "bio": "Contributing to the discussion"
+    },
+    {
+      "id": "r…",
+      "username": "r…",
+      "displayName": "r…",
+      "avatar": "R",
+      "avatarColor": "#5865f2",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-19T14:00:00Z",
+      "bio": "Participating in the conversation"
+    },
+    {
+      "id": "goobis",
+      "username": "goobis",
+      "displayName": "goobis",
+      "avatar": "G",
+      "avatarColor": "#43b581",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-19T16:00:00Z",
+      "bio": "Contributing to consciousness discussions"
+    },
+    {
+      "id": "general-obligation",
+      "username": "general-obligation",
+      "displayName": "general-obligation",
+      "avatar": "G",
+      "avatarColor": "#ed4245",
+      "status": "online",
+      "roles": ["member"],
+      "joinedAt": "2024-01-18T16:00:00Z",
+      "bio": "Contributing to the conversation"
     },
     {
       "id": "calling-tool",

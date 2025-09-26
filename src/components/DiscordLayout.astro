@@ -35,11 +35,22 @@ if (!currentChannel && currentServer.categories.length > 0) {
 <div class="discord-layout">
   <!-- Server Bar (Far Left) -->
   <div class="server-bar">
-    {servers.servers.map((serverItem) => (
-      <a href={`/servers/${serverItem.id}/${serverItem.categories[0].channels[0].id}`} class={`server-icon ${serverItem.id === server ? 'active' : ''}`}>
-        <div class="server-icon-inner">{serverItem.icon}</div>
-      </a>
-    ))}
+      {servers.servers.map((serverItem, index) => (
+        serverItem.id === server && (
+          <div class="active-server-bar" style={`top: ${22 + (index * 56)}px`}></div>
+        )
+      ))}
+      {servers.servers.map((serverItem) => (
+        <a href={`/servers/${serverItem.id}/${serverItem.categories[0].channels[0].id}`} class={`server-icon ${serverItem.id === server ? 'active' : ''}`}>
+          <div class="server-icon-inner">
+            {serverItem.icon.endsWith('.png') ? (
+              <img src={serverItem.icon} alt={serverItem.name} class="server-icon-image" />
+            ) : (
+              serverItem.icon
+            )}
+          </div>
+        </a>
+      ))}
     <div class="server-separator"></div>
     <div class="server-icon">
       <div class="server-icon-inner">+</div>
@@ -126,7 +137,7 @@ if (!currentChannel && currentServer.categories.length > 0) {
             {user.avatarImage ? (
               <img src={user.avatarImage} alt={user.displayName} class="avatar-image" />
             ) : (
-              <div class="avatar-inner">{user.avatar}</div>
+              <img src="/avatars/Egg.jpg" alt={user.displayName} class="avatar-image fallback-avatar" />
             )}
           </div>
           <div class="user-info">
@@ -161,6 +172,7 @@ if (!currentChannel && currentServer.categories.length > 0) {
     align-items: center;
     padding: 12px 0;
     gap: 8px;
+    overflow: visible;
   }
 
   .server-icon {
@@ -180,29 +192,36 @@ if (!currentChannel && currentServer.categories.length > 0) {
 
   .server-icon:hover {
     background-color: #5865f2;
-    border-radius: 16px;
+    border-radius: 50%;
   }
 
   .server-icon.active {
-    background-color: #5865f2;
-    border-radius: 16px;
+    background-color: transparent;
   }
 
-  .server-icon.active::before {
-    content: '';
+  .active-server-bar {
     position: absolute;
-    left: -16px;
-    width: 8px;
-    height: 40px;
+    left: 4px;
+    width: 4px;
+    height: 26px;
     background-color: white;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 2px 2px 0;
+    top: 22px;
+    z-index: 10;
   }
 
-  .server-icon-inner {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-  }
+    .server-icon-inner {
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .server-icon-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
   .server-separator {
     width: 32px;
@@ -455,6 +474,8 @@ if (!currentChannel && currentServer.categories.length > 0) {
     background-color: #2f3136;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    max-height: 100vh;
   }
 
   .sidebar-header {
@@ -476,6 +497,27 @@ if (!currentChannel && currentServer.categories.length > 0) {
   .user-list {
     flex: 1;
     padding: 8px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #202225 #2f3136;
+  }
+
+  .user-list::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .user-list::-webkit-scrollbar-track {
+    background: #2f3136;
+  }
+
+  .user-list::-webkit-scrollbar-thumb {
+    background: #202225;
+    border-radius: 4px;
+  }
+
+  .user-list::-webkit-scrollbar-thumb:hover {
+    background: #1a1c1f;
   }
 
   .user-item {
@@ -499,6 +541,11 @@ if (!currentChannel && currentServer.categories.length > 0) {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+  }
+
+  .user-avatar .fallback-avatar {
+    opacity: 0.8;
+    filter: grayscale(20%);
   }
 
   .user-avatar.online::after {

@@ -51,7 +51,7 @@ const user = users.users.find(u => u.id === authorId) || {
     {user.avatarImage ? (
       <img src={user.avatarImage} alt={user.displayName} class="avatar-image" />
     ) : (
-      <div class="avatar-inner">{user.avatar}</div>
+      <img src="/avatars/Egg.jpg" alt={user.displayName} class="avatar-image fallback-avatar" />
     )}
   </div>
   
@@ -163,6 +163,11 @@ const user = users.users.find(u => u.id === authorId) || {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+  }
+
+  .fallback-avatar {
+    opacity: 0.8;
+    filter: grayscale(20%);
   }
 
   .message-content {

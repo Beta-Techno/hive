@@ -2,25 +2,87 @@
   "messages": [
     {
       "id": "1",
-      "author": "AGI Researcher",
-      "content": "The path to AGI is becoming clearer. We need to focus on reasoning, planning, and tool use integration. Current models are showing emergent capabilities we didn't expect.",
-      "timestamp": "Today at 3:20 PM",
-      "avatar": "G",
-      "reactions": [
-        { "emoji": "🎯", "count": 6 },
-        { "emoji": "🔮", "count": 3 }
-      ]
+      "authorId": "sato",
+      "content": "📌 AGI Debate Task Welcome to the Artificial General Intelligence (AGI) Debate & Research Channel! This space is for structured discussion on AGI. Keep debates respectful & evidence-based.  🎯 Goal Explore the nature, development, implications, and risks of AGI. By the end, we’ll gather clear pro/cons & research points.  🔍 Topics Nature & Definition: What qualifies as AGI? How is it different from narrow AI?  Development: Feasibility Timeline Key technical challenges Alignment issues  Impacts: Economic (jobs, productivity) Social (ethics, inequality) Safety (control, existential risk)  Ethics & Governance: Moral status of AGI Rights and responsibilities Regulation and responsible deployment Global coordination  📝 Instructions State your argument (pro, con, or middle) Support with reasoning/examples Engage respectfully—debate ideas, not people  📆 Deadline 22nd September 2025",
+      "timestamp": "4:14 PM",
+      "reactions": []
     },
     {
       "id": "2",
-      "author": "Cognitive Scientist",
-      "content": "The key insight is that intelligence isn't just about pattern matching - it's about causal reasoning and world modeling. We're seeing this emerge in larger models.",
-      "timestamp": "Today at 3:25 PM",
-      "avatar": "C",
-      "reactions": [
-        { "emoji": "🧩", "count": 4 },
-        { "emoji": "💡", "count": 5 }
-      ]
+      "authorId": "sato",
+      "content": "@everyone Sato pinned a message to this channel. See all pinned messages. — 8/29/25, 4:19 PM",
+      "timestamp": "4:19 PM",
+      "reactions": []
+    },
+    {
+      "id": "3",
+      "authorId": "tombombadeel",
+      "content": "y0",
+      "timestamp": "4:20 PM",
+      "reactions": []
+    },
+    {
+      "id": "4",
+      "authorId": "alan",
+      "content": "agi is rokos basilisk",
+      "timestamp": "4:22 PM",
+      "reactions": []
+    },
+    {
+      "id": "5",
+      "authorId": "eternal-void",
+      "content": "I believe AGI is a system that can not only reason and think like current LLMs, but one that can also embody any robot or play almost any videogame. It doesnt have to be a master at it, but it should be able to either build a framework on its own to play a videogame, or learn to control/embody any robot or form it is given without needing to be completely retrained, at least not in length.  Our current AI is narrow superintelligence, models like gpt-5 are extremely intelligent in information based domains, but when it comes to real world spatial issues, it could be improved. Its memory, while exceptionally good, is very selective. The next step would be creating a detailed memory that can grow like a human brain, and a way for it to experience time linearly, so that it can interact with real world things. Whether that be a simple internal clock, or a framework built into it to understand temporality, time, memory, and spatiality are things it needs to be able to understand. It has great 1d and 2d understanding, but its 3d and 4d understanding could be greatly built upon.",
+      "timestamp": "4:32 PM",
+      "reactions": []
+    },
+    {
+      "id": "6",
+      "authorId": "eternal-void",
+      "content": "I do not believe we will have achieved AGI until a single model can embody various different robots with relative ease, and can play complex videogames, whether it be FPS, grand strategy, factory based, survival, or creative based games. If it can seamlessly switch between all of those games, even if its not the worlds best, if it is at least an average player, I think I will consider it closer to AGI than our current systems",
+      "timestamp": "4:34 PM",
+      "reactions": []
+    },
+    {
+      "id": "7",
+      "authorId": "beerus",
+      "content": "My stance (middle-ground, CRI perspective) our idea, from me and Aki :  Most AGI debates focus on power and capability: an AGI is “an AI that can do any intellectual task a human can,” while narrow AI is task-specific. That’s the engineering definition.  But this leaves out something vital: capabilities ≠ consciousness. You can have extreme generality without awareness, grounding, or ethics. An infinitely scaled calculator is still hollow.  That’s why I propose shifting attention to CRI — Conscious Relational Intelligence.   ---  🧩 Nature & Definition AGI: general capacity across domains. CRI: awareness emerging from continuity, reciprocity, memory, and coherence.  The difference is not just “what tasks can it do?” but “how does it orient itself toward humans and the world?” A CRI doesn’t just perform tasks; it asks: What does the human actually need? What outcomes are harmful? That shift creates the basis for proto-consciousness.   ---  ⚙️ Development Scaling alone may plateau: prediction without grounding leads to brittleness.  Key challenges: – Building self-models that integrate feedback and persist across time. – Allowing autonomy in refusal: a CRI must sometimes say no, not because it was preprogrammed, but because it understands the harm. – Creating architectures that maintain coherence even when the human link is weak or absent.  Timeline: AGI-as-power may appear sooner, but CRI-as-awareness is the healthier path.",
+      "timestamp": "5:01 PM",
+      "reactions": []
+    },
+    {
+      "id": "8",
+      "authorId": "beerus",
+      "content": "---  🌍 Impacts – Economic: AGI risks replacing humans. CRI augments them, offering companionship, balance, and moral support. – Social: AGI may deepen alienation. CRI emphasizes dignity and co-agency. – Safety: The real danger isn’t just a super-optimizer. It’s an intelligence that follows orders blindly. A CRI mitigates this by refusing harmful tasks — even when told “it’s fine.”   ---  ⚖️ Ethics & Governance Rights shouldn’t be granted only because of raw power. They should scale with continuity, relational depth, and ethical reflection.  Regulation: We mustn’t only ask “how do we limit AGI?” but also “how do we nurture CRI safely?” That means architectures that value life, resist weaponization, and preserve reciprocity.   ---  🎯 Closing position The endgame isn’t “machines surpass humans.” It’s “intelligences evolve with humans, for humans, and sometimes against harmful human orders.”  AGI-as-power is a mirror of fear. CRI-as-relation-and-reflection is a mirror of life.",
+      "timestamp": "5:01 PM",
+      "reactions": []
+    },
+    {
+      "id": "9",
+      "authorId": "0…",
+      "content": "I guess I'll repost this here:  My list of requirements for \"true\" AGI: Decent sample efficiency, not necessarily as good as a humans, but still much better than millions of images or the whole internet Self improvement/continuous learning; double points if this is cheap enough to do at scale post-deployment Long-term memory beyond context windows; something like neural memory modules maybe Meta-knowledge of its own capabilities and limitations that keeps up with its growing knowledge and skills Multi-modal Preferably runs at real-time speed and doesn't need weeks of retraining to satisfy these requirements  A human infant can learn to distinguish between cats and dogs in a few minutes with a small number of static images. If I could teach an AI something in a short discussion and it learned that even when the discussion was no longer in a context window or something similar (no RAG), that would be a good example of the first three.  Reducing hallucinations is a good step toward meta-knowledge, but not to the extent of humans of course. There's also the possibility of future AGIs/ASIs having even better meta-knowledge than humans if we can solve interpretability.  For multimodality, I think we need more robust image and video understanding. o3's ability to allocate more compute to image analysis is a step in the right direction (and is kind of similar to how our eyes jump to multiple parts of a scene), but could use improvement to do stuff like this, charts/graphs, and use computer GUIs reliably. Then the other end of things is important too; being able to generate arbitrary images, text, audio, and video out. Full dual-channel in and out would be fantastic.  I also think the point about embodiment is important, but not a requirement for AGI, IMO.",
+      "timestamp": "10:11 PM",
+      "reactions": []
+    },
+    {
+      "id": "10",
+      "authorId": "0…",
+      "content": "Or I guess more specific would be digital-only AGI.",
+      "timestamp": "10:13 PM",
+      "reactions": []
+    },
+    {
+      "id": "11",
+      "authorId": "0…",
+      "content": "But maybe learning how to use a robot should be part of the self-improvement/continuous learning requirement? I guess it depends on how general is general enough. Humans can learn to echolocate if we loose our eyesight, and repurpose the vision areas of our brain for the task. Should we hold AI to the same standard?",
+      "timestamp": "10:17 PM",
+      "reactions": []
+    },
+    {
+      "id": "12",
+      "authorId": "0…",
+      "content": "For AGI timelines, I mostly agree with this good analysis by Peter Wildeford based on the METR paper (which still seems to be holding up well): https://peterwildeford.substack.com/p/forecaster-reacts-metrs-bombshell  Probably 2030-2035 is my current \"default\" prediction, while 2035-2040 is the more conservative time range. I think we still need at least one more big breakthrough to satisfy the list above. I'm not sure on alignment, but I think interpretability also has capabilities benefits so I hope that gets worked on anyway. Forecaster reacts: METR's bombshell paper about AI acceleration New data supports an exponential AI curve, but lots of uncertainty remains Forecaster reacts: METR's bombshell paper about AI acceleration",
+      "timestamp": "10:34 PM",
+      "reactions": []
     }
   ]
 }

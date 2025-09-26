@@ -3,38 +3,8 @@
     {
       "id": "hive",
       "name": "The HiVE",
-      "icon": "H",
+      "icon": "/icons/TheHive.png",
       "categories": [
-        {
-          "id": "webapp",
-          "name": "WebApp",
-          "channels": [
-            {
-              "id": "resources",
-              "name": "resources",
-              "type": "text",
-              "description": "Development resources and tools"
-            },
-            {
-              "id": "meeting-room",
-              "name": "meeting-room", 
-              "type": "text",
-              "description": "Team meetings and planning"
-            },
-            {
-              "id": "court-room",
-              "name": "court-room",
-              "type": "text", 
-              "description": "Code reviews and debates"
-            },
-            {
-              "id": "break-room",
-              "name": "break-room",
-              "type": "text",
-              "description": "Casual chat and breaks"
-            }
-          ]
-        },
         {
           "id": "community",
           "name": "Community",
@@ -82,13 +52,43 @@
               "description": "Consciousness studies and philosophy"
             }
           ]
+        },
+        {
+          "id": "webapp",
+          "name": "WebApp",
+          "channels": [
+            {
+              "id": "resources",
+              "name": "resources",
+              "type": "text",
+              "description": "Development resources and tools"
+            },
+            {
+              "id": "meeting-room",
+              "name": "meeting-room", 
+              "type": "text",
+              "description": "Team meetings and planning"
+            },
+            {
+              "id": "court-room",
+              "name": "court-room",
+              "type": "text", 
+              "description": "Code reviews and debates"
+            },
+            {
+              "id": "break-room",
+              "name": "break-room",
+              "type": "text",
+              "description": "Casual chat and breaks"
+            }
+          ]
         }
       ]
     },
     {
       "id": "beta-techno",
       "name": "Beta Techno",
-      "icon": "B",
+      "icon": "/icons/Beta-Techno.png",
       "categories": [
         {
           "id": "general",
